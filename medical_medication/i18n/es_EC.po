@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-04 12:32+0000\n"
-"PO-Revision-Date: 2017-12-04 07:45-0500\n"
+"POT-Creation-Date: 2018-02-07 17:13+0000\n"
+"PO-Revision-Date: 2018-02-07 12:16-0500\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: es\n"
+"Language: es_EC\n"
 "X-Generator: Poedit 1.8.7.1\n"
 
 #. module: medical_medication
@@ -100,14 +100,14 @@ msgstr "Curso terminado"
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_create_uid
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_create_uid
 msgid "Created by"
-msgstr "Creado por"
+msgstr "Creado por:"
 
 #. module: medical_medication
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_dosage_create_date
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_create_date
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_create_date
 msgid "Created on"
-msgstr "Creado en"
+msgstr "Creado"
 
 #. module: medical_medication
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_date_start_treatment
@@ -135,7 +135,7 @@ msgstr "Razón interrupción"
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_display_name
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_display_name
 msgid "Display Name"
-msgstr "Nombre mostrado"
+msgstr "Nombre a Mostrar"
 
 #. module: medical_medication
 #: model:ir.ui.view,arch_db:medical_medication.medical_medication_template_view_form
@@ -218,7 +218,7 @@ msgstr "Agrupar por..."
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_id
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_id
 msgid "ID"
-msgstr "ID (identificación)"
+msgstr "ID"
 
 #. module: medical_medication
 #: model:ir.ui.view,arch_db:medical_medication.medical_patient_medication_view_search
@@ -241,21 +241,21 @@ msgstr "Se interrumpe"
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template___last_update
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication___last_update
 msgid "Last Modified on"
-msgstr "Última modificación en"
+msgstr "Fecha de modificación"
 
 #. module: medical_medication
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_dosage_write_uid
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_write_uid
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_write_uid
 msgid "Last Updated by"
-msgstr "Última actualización de"
+msgstr "Ultima Actualización por"
 
 #. module: medical_medication
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_dosage_write_date
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_write_date
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_write_date
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr "Actualizado en"
 
 #. module: medical_medication
 #: model:ir.model.fields,help:medical_medication.field_medical_medication_template_dose_uom_id
@@ -323,6 +323,7 @@ msgstr "Plantilla de medicación"
 #: model:ir.actions.act_window,name:medical_medication.medical_patient_medication_action
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_count_medication_ids
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_ids
+#: model:ir.ui.menu,name:medical_medication.medical_patient_medication_menu
 #: model:ir.ui.menu,name:medical_medication.medications_menu_config
 #: model:ir.ui.view,arch_db:medical_medication.medical_patient_view_form
 msgid "Medications"
