@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
 encoding//medical/models/medical_patient.py=utf-8
 encoding//medical_medication/__manifest__.py=utf-8
+encoding//medical_prescription/__manifest__.py=utf-8

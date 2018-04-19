@@ -39,7 +39,7 @@
             </xpath>
             <xpath expr="//group[@name='main_data']" position="replace">
                 <group name="main_data">
-                    <!-- <field name="gender" /> -->
+                    <field name="gender" />
                     <field name="employee" />
                 </group>
             </xpath>

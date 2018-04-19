@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 LasLabs Inc.
+<!-- # Copyright 2008 Luis Falcon <lfalcon@gnusolidario.org>
+     Copyright 2016 LasLabs Inc.
      License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
 <odoo>
@@ -35,11 +36,9 @@
                 <h3>
                     <field name="parent_id"
                            placeholder="Medical Center"
-                           domain="[('is_company', '=', True)]"
-                           context="{'default_is_company': True}"
+                           domain="[('is_company', '=', True), ('type', '=', 'medical.center')]"
+                           context="{'default_is_company': True, 'default_type': 'medical.center'}"
                            />
-                           <!-- domain="[('type', '=', 'medical.center')]"
-                           context="{'default_type': 'medical.center'}" -->
                     <field name="specialty_id"/>
                 </h3>
             </xpath>
@@ -48,7 +47,7 @@
                 <field name="info"/>
             </xpath>
             <xpath expr="//group[@name='main_data']/group[@name='right']" position="inside">
-                <!-- <field name="gender" /> -->
+                <field name="gender" />
                 <field name="employee" />
             </xpath>
             <xpath expr="//img[@name='kanban_image_default_person']" position="replace">

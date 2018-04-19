@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# Copyright 2008 Luis Falcon <lfalcon@gnusolidario.org>
 # Copyright 2016-2017 LasLabs Inc.
 # License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
@@ -313,7 +314,7 @@ class MedicalAppointment(models.Model):
     
             @return: returns a id of new record
         """
-        if values.get('name', 'AP001') == 'AP001' or values.get('name', 'AP001') == 'Nuevo':
+        if values.get('name', 'AP001') == 'AP001' or values.get('name', 'AP001') == 'New':
             values['name'] = self.env['ir.sequence'].next_by_code('medical.appointment') or 'AP001'
     
         result = super(MedicalAppointment, self).create(values)
