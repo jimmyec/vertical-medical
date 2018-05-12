@@ -60,9 +60,6 @@
         <field name="model">medical.prescription.order</field>
         <field name="arch" type="xml">
             <form string="Medical Prescription Order">
-                <header>
-                    <button name="action_print_prescription" string="Print Prescription" type="object" />
-                </header>
                 <sheet>
                     <div class="oe_title" name="title">
                         <label for="name" class="oe_edit_only" />
@@ -109,11 +106,9 @@
                                     <field name="duration_uom_id" />
                                     <field name="notes" />
                                     <field name="patient_id" invisible="1" readonly="1" />
-                                    
 <!--                                     <field name="date_start_treatment" />
                                     <field name="date_stop_treatment" />
  -->                                    <!-- <field name="pathology_id" /> -->
-                                    
                                 </tree>
                             </field>
                         </page>

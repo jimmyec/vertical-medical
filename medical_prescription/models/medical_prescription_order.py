@@ -4,6 +4,7 @@
 # License GPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import api, fields, models, tools, _
+from odoo.exceptions import UserError
 
 
 class MedicalPrescriptionOrder(models.Model):
@@ -89,8 +90,8 @@ class MedicalPrescriptionOrder(models.Model):
     
             @return: returns a id of new record
         """
-        if values.get('name', 'PRO001') == 'PRO001' or values.get('name', 'PRO001') == 'Nuevo':
-            values['name'] = self.env['ir.sequence'].next_by_code('medical.prescription.order') or 'PRO001'
+        if values.get('name', 'New') == 'New' or values.get('name', 'New') == 'Nuevo':
+            values['name'] = self.env['ir.sequence'].next_by_code('medical.prescription.order') or 'New'
     
         result = super(MedicalPrescriptionOrder, self).create(values)
     
@@ -110,9 +111,13 @@ class MedicalPrescriptionOrder(models.Model):
             )
 
     @api.multi
-    def action_print_prescription(self):
-        if self.prescription_order_line_ids:
-            return self.env['report'].get_action(self, 'medical_prescription.report_prescriptionorder')
-        else:
-            raise UserError(_("No prescription available for printing."))
-            
+    def copy(self, default=None):
+        '''
+        @param self: object pointer
+        @param default: dict of default values to be set
+        '''
+        default = dict(default or {})
+        default.update(
+            name=('New'),
+            )
+        return super(MedicalPrescriptionOrder, self).copy(default=default)

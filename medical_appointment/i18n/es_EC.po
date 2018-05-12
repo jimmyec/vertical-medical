@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-04 12:46+0000\n"
-"PO-Revision-Date: 2017-12-04 07:50-0500\n"
+"POT-Creation-Date: 2018-04-26 00:07+0000\n"
+"PO-Revision-Date: 2018-04-25 19:08-0500\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: en\n"
+"Language: es\n"
 "X-Generator: Poedit 1.8.7.1\n"
 
 #. module: medical_appointment
@@ -112,12 +112,6 @@ msgid "<strong>Duration:</strong>"
 msgstr "<strong>Duration:</strong>"
 
 #. module: medical_appointment
-#: code:addons/medical_appointment/models/medical_appointment.py:37
-#, python-format
-msgid "AP001"
-msgstr "AP001"
-
-#. module: medical_appointment
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_alias
 msgid "Alias"
 msgstr "Alias"
@@ -177,13 +171,13 @@ msgstr "Servicios de Consulta"
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_create_uid
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_create_uid
 msgid "Created by"
-msgstr "Creado por"
+msgstr "Creado por:"
 
 #. module: medical_appointment
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_create_date
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_create_date
 msgid "Created on"
-msgstr "Creado en"
+msgstr "Creado"
 
 #. module: medical_appointment
 #: model:ir.model.fields,help:medical_appointment.field_medical_appointment_stage_id
@@ -210,7 +204,7 @@ msgstr "Defecto?"
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_display_name
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_display_name
 msgid "Display Name"
-msgstr "Nombre mostrado"
+msgstr "Nombre a Mostrar"
 
 #. module: medical_appointment
 #: model:medical.appointment.stage,name:medical_appointment.stage_appointment_done
@@ -259,9 +253,9 @@ msgstr "Centros Médicos"
 
 #. module: medical_appointment
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_id
-#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_id_4938
+#: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_id_4624
 msgid "ID"
-msgstr "ID (identificación)"
+msgstr "ID"
 
 #. module: medical_appointment
 #: model:ir.model.fields,help:medical_appointment.field_medical_appointment_stage_is_default
@@ -282,19 +276,19 @@ msgstr "Paciente interno"
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment___last_update
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage___last_update
 msgid "Last Modified on"
-msgstr "Última modificación en"
+msgstr "Fecha de modificación"
 
 #. module: medical_appointment
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_write_uid
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_write_uid
 msgid "Last Updated by"
-msgstr "Última actualización de"
+msgstr "Ultima Actualización por"
 
 #. module: medical_appointment
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_stage_write_date
 #: model:ir.model.fields,field_description:medical_appointment.field_medical_appointment_write_date
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr "Actualizado en"
 
 #. module: medical_appointment
 #: model:ir.ui.view,arch_db:medical_appointment.medical_appointment_view_form
@@ -340,7 +334,13 @@ msgid "Medical center that appointment is located at"
 msgstr "Centro médico donde se encuentra la cita"
 
 #. module: medical_appointment
-#: code:addons/medical_appointment/models/medical_appointment.py:300
+#: code:addons/medical_appointment/models/medical_appointment.py:37
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: medical_appointment
+#: code:addons/medical_appointment/models/medical_appointment.py:298
 #, python-format
 msgid "No default stage defined for review"
 msgstr "No se definió etapa predeterminada para la revisión"
@@ -383,7 +383,7 @@ msgid "Physician"
 msgstr "Médico"
 
 #. module: medical_appointment
-#: code:addons/medical_appointment/models/medical_appointment.py:200
+#: code:addons/medical_appointment/models/medical_appointment.py:198
 #, python-format
 msgid "Physician is in an appointment during the selected time. Select `Force Schedule` if you would like to schedule anyways."
 msgstr "El médico está en una cita durante el tiempo seleccionado. Seleccione Forzar Calendario si desea programar de todos modos."

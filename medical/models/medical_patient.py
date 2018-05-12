@@ -147,3 +147,17 @@ class MedicalPatient(models.Model):
 
     def toggle_counseling_yn(self):
         self.toggle('counseling_yn')
+
+    @api.multi
+    def copy(self, default=None):
+        '''
+        @param self: object pointer
+        @param default: dict of default values to be set
+        '''
+        default = dict(default or {})
+        default.update(
+            identification_code=(''),
+            name=_("%s (copy)") % (self.name or '')
+        )
+        # default.setdefault('name', _("%s (copy)")
+        return super(MedicalPatient, self).copy(default=default)

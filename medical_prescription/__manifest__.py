@@ -22,8 +22,6 @@
         "security/ir.model.access.csv",
         "views/medical_prescription_order_view.xml",
         "views/medical_prescription_order_line_view.xml",
-        "report/medical_prescription_order_report.xml",
-        "report/medical_prescription_order_report_template.xml",
         "views/medical_patient_view.xml",
         "views/medical_menu.xml",
     ],
