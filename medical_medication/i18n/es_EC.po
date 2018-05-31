@@ -6,16 +6,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-07 17:13+0000\n"
-"PO-Revision-Date: 2018-02-07 12:16-0500\n"
+"POT-Creation-Date: 2018-05-28 01:36+0000\n"
+"PO-Revision-Date: 2018-05-27 20:44-0500\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: es_EC\n"
 "X-Generator: Poedit 1.8.7.1\n"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.422114001
+msgid "1 time"
+msgstr "1 vez"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.229797004
+msgid "1 time per day"
+msgstr "1 vez por día"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.396142006
+msgid "1 time per day at bedtime"
+msgstr "1 vez por día al acostarse"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.396147000
+msgid "1 time per day in the evening"
+msgstr "1 vez por día en la noche"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.307472001
+msgid "1 time per day in the morning"
+msgstr "1 vez al día por la mañana"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.225769003
+msgid "1 time per week"
+msgstr "1 vez por semana"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.229799001
+msgid "2 times per day"
+msgstr "2 veces por día"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.229798009
+msgid "3 times per day"
+msgstr "3 veces por día"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.396145008
+msgid "3 times per day, before meals"
+msgstr "3 veces por día, antes de las comidas"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.396146009
+msgid "3 times per day, with meals"
+msgstr "3 veces por día, con las comidas"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.307439001
+msgid "4 times per day"
+msgstr "4 veces por día"
 
 #. module: medical_medication
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_dosage_abbreviation
@@ -120,6 +175,11 @@ msgid "Date stop treatment"
 msgstr "Fecha interrupción tratamiento"
 
 #. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_day
+msgid "Day(s)"
+msgstr "Día(s)"
+
+#. module: medical_medication
 #: model:ir.ui.view,arch_db:medical_medication.medical_patient_medication_view_form
 msgid "Discontinued Reason"
 msgstr "Razón interrupción"
@@ -135,7 +195,7 @@ msgstr "Razón interrupción"
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_display_name
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_display_name
 msgid "Display Name"
-msgstr "Nombre a Mostrar"
+msgstr "Nombre mostrado"
 
 #. module: medical_medication
 #: model:ir.ui.view,arch_db:medical_medication.medical_medication_template_view_form
@@ -213,17 +273,27 @@ msgid "Group By..."
 msgstr "Agrupar por..."
 
 #. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_hour
+msgid "Hour(s)"
+msgstr "Hora(s)"
+
+#. module: medical_medication
 #: model:ir.model.fields,field_description:medical_medication.field_abstract_medical_medication_id
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_dosage_id
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_id
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_id
 msgid "ID"
-msgstr "ID"
+msgstr "ID (identificación)"
 
 #. module: medical_medication
 #: model:ir.ui.view,arch_db:medical_medication.medical_patient_medication_view_search
 msgid "Inactive"
 msgstr "Inactivo"
+
+#. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_indef
+msgid "Indefinitely"
+msgstr "Indefinidamente"
 
 #. module: medical_medication
 #: model:ir.ui.view,arch_db:medical_medication.medical_medication_template_view_search
@@ -241,21 +311,26 @@ msgstr "Se interrumpe"
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template___last_update
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication___last_update
 msgid "Last Modified on"
-msgstr "Fecha de modificación"
+msgstr "Última modificación en"
 
 #. module: medical_medication
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_dosage_write_uid
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_write_uid
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_write_uid
 msgid "Last Updated by"
-msgstr "Ultima Actualización por"
+msgstr "Última actualización de"
 
 #. module: medical_medication
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_dosage_write_date
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_template_write_date
 #: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_write_date
 msgid "Last Updated on"
-msgstr "Actualizado en"
+msgstr "Última actualización en"
+
+#. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_litre
+msgid "Litre(s)"
+msgstr "Litro(s)"
 
 #. module: medical_medication
 #: model:ir.model.fields,help:medical_medication.field_medical_medication_template_dose_uom_id
@@ -292,11 +367,6 @@ msgid "Medical Medication Template"
 msgstr "Plantilla de medicación"
 
 #. module: medical_medication
-#: model:ir.model,name:medical_medication.model_medical_patient
-msgid "Medical Patient"
-msgstr "Paciente"
-
-#. module: medical_medication
 #: model:ir.model,name:medical_medication.model_medical_patient_medication
 msgid "Medical Patient Medication"
 msgstr "Medicación para pacientes"
@@ -321,23 +391,25 @@ msgstr "Plantilla de medicación"
 
 #. module: medical_medication
 #: model:ir.actions.act_window,name:medical_medication.medical_patient_medication_action
-#: model:ir.model.fields,field_description:medical_medication.field_medical_patient_count_medication_ids
-#: model:ir.model.fields,field_description:medical_medication.field_medical_patient_medication_ids
 #: model:ir.ui.menu,name:medical_medication.medical_patient_medication_menu
 #: model:ir.ui.menu,name:medical_medication.medications_menu_config
-#: model:ir.ui.view,arch_db:medical_medication.medical_patient_view_form
 msgid "Medications"
 msgstr "Medicaciones"
-
-#. module: medical_medication
-#: model:ir.model.fields,help:medical_medication.field_medical_patient_medication_ids
-msgid "Medications that the patient is currently on"
-msgstr "Medicamentos que el paciente está tomando actualmente"
 
 #. module: medical_medication
 #: model:ir.ui.menu,name:medical_medication.medicine_menu
 msgid "Medicine"
 msgstr "Medicina"
+
+#. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_minute
+msgid "Minute(s)"
+msgstr "Minuto(s)"
+
+#. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_month
+msgid "Month(s)"
+msgstr "Mes(es)"
 
 #. module: medical_medication
 #: model:ir.model.fields,field_description:medical_medication.field_medical_medication_dosage_name
@@ -436,6 +508,11 @@ msgid "This code is already in use by %s"
 msgstr "Este código ya está siendo utilizada por %s"
 
 #. module: medical_medication
+#: model:product.uom.categ,name:medical_medication.product_uom_categ_time
+msgid "Time"
+msgstr "Hora"
+
+#. module: medical_medication
 #: model:ir.model.fields,help:medical_medication.field_medical_medication_template_frequency
 #: model:ir.model.fields,help:medical_medication.field_medical_patient_medication_frequency
 msgid "Time in between doses the patient must wait (ie, for 1 pill each 8 hours, put here 8 and select \"hours\" in the unit field"
@@ -472,3 +549,78 @@ msgstr "Cuando el paciente comenzó a tomar este medicamento"
 #: model:ir.model.fields,help:medical_medication.field_medical_patient_medication_date_stop_treatment
 msgid "When the patient is scheduled to stop this medication"
 msgstr "Cuando el paciente está programado para parar este medicamento"
+
+#. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_year
+msgid "Year(s)"
+msgstr "Año(s)"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.420449005
+msgid "as needed"
+msgstr "según sea necesario"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.307470009
+msgid "every 12 hours"
+msgstr "cada 12 horas"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.225750008
+msgid "every 2 hours"
+msgstr "cada 2 horas"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.307476003
+msgid "every 28 days"
+msgstr "cada 28 días"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.225756002
+msgid "every 4 hours"
+msgstr "cada 4 horas"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.307468000
+msgid "every 6 hours"
+msgstr "cada 6 horas"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.307469008
+msgid "every 8 hours"
+msgstr "cada 8 horas"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.307475004
+msgid "every month"
+msgstr "cada mes"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.225760004
+msgid "every other day"
+msgstr "cualquier otro día"
+
+#. module: medical_medication
+#: model:medical.medication.dosage,name:medical_medication.20050000
+msgid "every two weeks"
+msgstr "cada dos semanas"
+
+#. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_ml
+msgid "mL"
+msgstr "mL"
+
+#. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_mg
+msgid "mg"
+msgstr "mg"
+
+#. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_mmol
+msgid "mmol"
+msgstr "mmol"
+
+#. module: medical_medication
+#: model:product.uom,name:medical_medication.product_uom_ug
+msgid "ug"
+msgstr "ug"
