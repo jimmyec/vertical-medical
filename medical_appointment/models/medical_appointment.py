@@ -313,7 +313,7 @@ class MedicalAppointment(models.Model):
 
             @return: returns a id of new record
         """
-        if values.get('name', 'New') == 'New' or values.get('name', 'New') == 'Nuevo':
+        if values.get('name', 'New') == 'New':
             values['name'] = self.env['ir.sequence'].next_by_code(
                 'medical.appointment') or 'New'
 
