@@ -5,7 +5,7 @@
 
 from odoo import fields, models, exceptions, api, _
 from odoo.addons import decimal_precision as dp
-from datetime import timedelta
+from datetime import date, datetime, timedelta
 
 
 class MedicalAppointment(models.Model):
@@ -34,9 +34,9 @@ class MedicalAppointment(models.Model):
     )
     name = fields.Char(
         string='Appointment ID',
-        default=lambda self: _('New'),
-        copy=False,
-        required=True
+        required=True,
+        # readonly=True,
+        default=lambda self: _('New')
     )
     force_schedule = fields.Boolean(
         help='Check this to ignore any double bookings and schedule anyways',
@@ -319,6 +319,19 @@ class MedicalAppointment(models.Model):
         result = super(MedicalAppointment, self).create(values)
 
         return result
+
+    @api.multi
+    def copy(self, default=None):
+        '''
+        @param self: object pointer
+        @param default: dict of default values to be set
+        '''
+        default = dict(default or {})
+        default.update(
+            name=('New'),
+            appointment_date=(datetime.now()),
+            )
+        return super(MedicalAppointment, self).copy(default=default)
 
     @api.model
     def _needaction_count(self, domain=None):
