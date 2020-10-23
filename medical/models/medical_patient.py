@@ -99,14 +99,13 @@ class MedicalPatient(models.Model):
             vals['identification_code'] = Seq.sudo().next_by_code(
                 self._name,
             )
-        vals.update({
-            'customer': True,
-        })
+        # vals.update({
+        #     'customer': True,
+        # })
         return vals
 
-    # @api.model_cr_context
     def _get_default_image_path(self, vals):
-        super(MedicalPatient, self)._get_default_image_path(vals)
+        super()._get_default_image_path(vals)
         return get_module_resource(
             'medical', 'static/src/img', 'patient-avatar.png',
         )

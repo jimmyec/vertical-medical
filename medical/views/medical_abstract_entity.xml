@@ -22,7 +22,7 @@
         <form string="Medical Entity">
             <header />
             <sheet>
-                <field name="image"
+                <field name="image_256"
                        widget='image'
                        class="oe_left oe_avatar"
                        options="{'preview_image': 'image_medium',
@@ -33,8 +33,8 @@
                     <h1>
                         <field name="name" placeholder="Name" />
                         <field name="is_company" invisible="True" />
-                        <field name="supplier" invisible="True" />
-                        <field name="customer" invisible="True" />
+                        <!-- <field name="supplier" invisible="True" /> -->
+                        <!-- <field name="customer" invisible="True" /> -->
                         <field name="parent_id" invisible="True" />
                     </h1>
                 </div>
@@ -88,7 +88,7 @@
                                                                  ('parent_id', '!=', False)],
                                                    }"
                                            context="{'country_id': country_id, 'zip': zip}"
-                                           domain="[('country_id', '=', country_id')]"
+                                           domain="[('country_id', '=', country_id)]"
                                     />
                                     <field name="zip"
                                            placeholder="ZIP"
@@ -115,7 +115,6 @@
                             <group name="group_contact_right">
                                 <field name="phone" widget="phone" />
                                 <field name="mobile" widget="phone" />
-                                <field name="fax" />
                                 <field name="user_ids" invisible="1" />
                                 <field name="email" widget="email" attrs="{'required': [('user_ids','!=', [])]}" />
                                 <field name="title"
@@ -159,9 +158,8 @@
                                 <field name="city" />
                                 <field name="country_id" />
                                 <field name="mobile" />
-                                <field name="fax" />
                                 <field name="state_id" />
-                                <field name="image" />
+                                <field name="image_256" />
                                 <field name="lang" />
                                 <templates>
                                     <t t-name="kanban-box">
@@ -172,26 +170,31 @@
                                         <div t-attf-class="{{ color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '') }} oe_kanban_global_click">
                                             <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right" />
                                             <div class="o_kanban_image" name="contact_kanban_image">
-                                                <img t-if="record.image.raw_value"
-                                                     t-attf-src="data:image/png;base64,{{ record.image.raw_value }}"
+                                                <img t-if="record.image_256.raw_value"
+                                                     t-attf-src="data:image/png;base64,{{ record.image_256.raw_value }}"
+                                                     alt="patient"
                                                 />
-                                                <t t-if="!record.image.raw_value" name="kanban_image_default">
+                                                <t t-if="!record.image_256.raw_value" name="kanban_image_default">
                                                     <img name="kanban_image_default_delivery"
                                                          t-if="record.type.raw_value === 'delivery'"
                                                          t-attf-src='{{ _s }}/base/static/src/img/truck.png'
+                                                         alt="default delivery" 
                                                     />
                                                     <img name="kanban_image_default_invoice"
                                                          t-if="record.type.raw_value === 'invoice'"
                                                          t-attf-src='{{ _s }}/base/static/src/img/money.png'
+                                                         alt="default invoce" 
                                                     />
                                                     <t t-if="record.type.raw_value !== 'invoice' &amp;&amp; record.type.raw_value !== 'delivery'">
                                                         <img name="kanban_image_default_company"
                                                              t-if="record.is_company.raw_value === true"
                                                              t-attf-src='{{ _s }}/base/static/src/img/company_image.png'
+                                                             alt="default company" 
                                                         />
                                                         <img name="kanban_image_default_person"
                                                              t-if="record.is_company.raw_value === false"
                                                              t-attf-src='{{ _s }}/base/static/src/img/avatar.png'
+                                                             alt="default person" 
                                                         />
                                                     </t>
                                                 </t>
@@ -219,9 +222,6 @@
                                                 </div>
                                                 <div t-if="record.mobile.raw_value">
                                                     Mobile: <field name="mobile" />
-                                                </div>
-                                                <div t-if="record.fax.raw_value">
-                                                    Fax: <field name="fax" />
                                                 </div>
                                             </div>
                                         </div>
@@ -290,10 +290,10 @@
                                             <field name="comment" placeholder="Internal Note..." />
                                         </group>
                                     </group>
-                                    <field name="supplier" invisible="True" />
-                                    <field name="customer" invisible="True" />
+                                    <!-- <field name="supplier" invisible="True" /> -->
+                                    <!-- <field name="customer" invisible="True" /> -->
                                     <field name="lang" invisible="True" />
-                                    <field name="image" invisible="True" />
+                                    <field name="image_256" invisible="True" />
                                 </sheet>
                             </form>
                         </field>
@@ -316,7 +316,6 @@
     <record id="medical_abstract_entity_view_kanban" model="ir.ui.view">
         <field name="name">medical.abstract.entity.kanban</field>
         <field name="model">medical.abstract.entity</field>
-        <field name="type">kanban</field>
         <field name="arch" type="xml">
             <kanban class="o_res_partner_kanban">
                 <field name="color" />
@@ -335,24 +334,27 @@
                 <field name="mobile" />
                 <field name="state_id" />
                 <field name="category_id" />
-                <field name="image_small" />
+                <field name="image_128" />
                 <field name="type" />
                 <templates>
                     <t t-name="kanban-box">
                         <div class="oe_kanban_global_click o_res_partner_kanban">
                             <div class="o_kanban_tags_section oe_kanban_partner_categories" />
                             <div class="o_kanban_image">
-                                <t t-if="record.image_small.raw_value">
-                                    <img t-att-src="kanban_image('res.partner', 'image_small', record.id.value)" />
+                                <t t-if="record.image_128.raw_value">
+                                    <img t-att-src="kanban_image('res.partner', 'image_128', record.id.value)"
+                                        alt="patient" />
                                 </t>
-                                <t t-if="!record.image_small.raw_value">
+                                <t t-if="!record.image_128.raw_value">
                                     <t t-if="record.is_company.raw_value === true">
                                         <img name="kanban_image_default_company"
-                                             t-attf-src='{{ _s }}/base/static/src/img/company_image.png' />
+                                             t-attf-src='{{ _s }}/base/static/src/img/company_image.png'
+                                             alt="default company"  />
                                     </t>
                                     <t t-if="record.is_company.raw_value === false">
                                         <img name="kanban_image_default_person"
-                                             t-attf-src='{{ _s }}/base/static/src/img/avatar.png' />
+                                             t-attf-src='{{ _s }}/base/static/src/img/avatar.png' 
+                                             alt="default person" />
                                     </t>
                                 </t>
                             </div>
@@ -385,11 +387,14 @@
                 <field name="parent_id" invisible="1" />
                 <field name="partner_id" invisible="1" />
                 <filter string="Deactivated"
+                        name="deactivated"
                         domain="[('active', '=', 0)]" />
                 <filter string="Parent"
+                        name="group_by_parent"
                         domain="[]"
                         context="{'group_by':'parent_id'}" />
                 <filter string="Related Partner"
+                        name="group_by_partner"
                         domain="[('partner_id', 'child_of', partner_id)]"
                         invisible="1"
                         />

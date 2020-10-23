@@ -48,7 +48,6 @@
                     <field name="parent_id"
                            colspan="2"
                            string="Legal Representative"
-                           domain="[('customer','=',True)]"
                            />
                 </group>
             </xpath>
@@ -56,6 +55,7 @@
                 <img name="kanban_image_default_person"
                      t-if="record.is_company.raw_value === false"
                      t-attf-src='{{ _s }}/medical/static/src/img/patient-avatar.png'
+                     alt="default person"
                 />
             </xpath>
             <xpath expr="//notebook" position="inside">
@@ -92,9 +92,9 @@
                 <label for="weight" />
                 <div>
                     <field name='weight' class="oe_inline" />
-                    <field name='weight_uom'
+                    <!-- <field name='weight_uom'
                            class="oe_inline"
-                           placeholder="UoM" />
+                           placeholder="UoM" /> -->
                 </div>
             </xpath>
         </field>
@@ -128,6 +128,7 @@
                 <img name="kanban_image_default_person"
                      t-if="record.is_company.raw_value === false"
                      t-attf-src='{{ _s }}/medical/static/src/img/patient-avatar.png'
+                     alt='default person'
                 />
             </xpath>
         </field>
@@ -149,6 +150,7 @@
             </xpath>
             <xpath expr="//filter" position="after">
                 <filter string="DoB"
+                        name="group_by_DoB"
                         domain="[]"
                         context="{'group_by':'birthdate_date'}" />
                 <filter name="patient_ids_filter"

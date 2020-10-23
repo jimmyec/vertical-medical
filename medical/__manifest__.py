@@ -8,7 +8,7 @@
     'category': 'Medical',
     'depends': [
         'product',
-        'base_locale_uom_default'
+        # 'base_locale_uom_default'
     ],
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'website': 'https://odoo-community.org/',

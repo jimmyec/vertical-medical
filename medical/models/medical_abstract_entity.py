@@ -5,6 +5,7 @@
 import threading
 
 from odoo import api, fields, models, tools
+import base64
 
 
 class MedicalAbstractEntity(models.AbstractModel):
@@ -54,10 +55,9 @@ class MedicalAbstractEntity(models.AbstractModel):
     def _create_vals(self, vals):
         """ Override this in child classes in order to add default values. """
         if self._allow_image_create(vals):
-            vals['image'] = self._get_default_image_encoded(vals)
+            vals['image_256'] = self._get_default_image_encoded(vals)
         return vals
 
-    # @api.model_cr_context
     def _allow_image_create(self, vals):
         """ It determines if conditions are present that should stop image gen.
 
@@ -70,7 +70,7 @@ class MedicalAbstractEntity(models.AbstractModel):
          child that chooses to provide custom rules shall also adhere to this
          context, unless there is a documented reason to not do so.
         """
-        if vals.get('image'):
+        if vals.get('image_256'):
             return False
         if any((getattr(threading.currentThread(), 'testing', False),
                 self._context.get('install_mode'))):
@@ -78,7 +78,6 @@ class MedicalAbstractEntity(models.AbstractModel):
                 return False
         return True
 
-    # @api.model_cr_context
     def _create_default_image(self, vals):
         base64_image = self._get_default_image_encoded(vals)
         if not base64_image:
@@ -98,10 +97,10 @@ class MedicalAbstractEntity(models.AbstractModel):
         image_path = self._get_default_image_path(vals)
         if not image_path:
             return
-        with open(image_path, 'r') as image:
-            return image.read().encode('base64')
+        with open(image_path, 'rb') as image:
+            # return image.read().encode('base64')
+            return base64.b64encode(image.read())
 
-    # @api.model_cr_context
     def _get_default_image_path(self, vals):
         """ Overload this in child classes in order to add a default image.
 
