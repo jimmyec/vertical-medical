@@ -5,7 +5,7 @@
 {
 
     'name': 'Medical Prescription Threaded',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'author': 'LasLabs, Odoo Medical Team, Odoo Community Association (OCA)',
     'category': 'Medical',
     'depends': [

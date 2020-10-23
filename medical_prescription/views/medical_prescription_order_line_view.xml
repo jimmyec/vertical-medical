@@ -21,10 +21,12 @@
                         domain="[('is_substitutable', '=', True)]" />
             </xpath>
             <xpath expr="//group" position="inside">
-                <filter string="Prescription Order"
+                <filter name="group_by_prescription_order"
+                        string="Prescription Order"
                         domain="[]"
                         context="{'group_by':'prescription_order_id'}" />
-                <filter string="Medication"
+                <filter name="group_by_medical_medication"
+                        string="Medication"
                         domain="[]"
                         context="{'group_by':'medical_medication_id'}" />
             </xpath>
@@ -117,15 +119,10 @@
 
     <record id="medical_prescription_order_line_action" model="ir.actions.act_window">
         <field name="name">Prescription Order Lines</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.prescription.order.line</field>
-        <field name="view_type">form</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="search_view_id" ref="medical_prescription_order_line_view_search" />
-        <!-- <field name="view_id" ref="medical_prescription_order_line_view_kanban" /> -->
         <field name="view_id" ref="medical_prescription_order_line_view_tree" />
-        <field name="domain">[]</field>
-        <field name="context">{}</field>
     </record>
 
 </odoo>

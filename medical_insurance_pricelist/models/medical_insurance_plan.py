@@ -23,14 +23,12 @@ class MedicalInsurancePlan(models.Model):
         res._save_pricelist_and_invalidate_plans()
         return res
 
-    @api.multi
     def write(self, vals):
         res = super(MedicalInsurancePlan, self).write(vals)
         if vals.get('active', True):
             self._save_pricelist_and_invalidate_plans()
         return res
 
-    @api.multi
     def _save_pricelist_and_invalidate_plans(self):
         for rec_id in self:
             if rec_id.patient_id:
@@ -43,6 +41,5 @@ class MedicalInsurancePlan(models.Model):
                 ])
                 plan_ids.action_invalidate()
 
-    @api.multi
     def action_invalidate(self):
         self.write({'active': False})

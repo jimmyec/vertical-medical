@@ -5,7 +5,7 @@
 {
     "name": "Medical Prescription Sale Stock - US",
     "summary": "Provides US Locale to Medical Prescription Sale Stock",
-    "version": "10.0.1.0.0",
+    "version": "13.0.0.0.0",
     "category": "Medical",
     "website": "https://laslabs.com",
     "author": "LasLabs, Odoo Community Association (OCA)",

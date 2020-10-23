@@ -36,7 +36,6 @@ class SaleOrder(models.Model):
         readonly=True,
     )
 
-    @api.multi
     def _compute_patient_ids(self):
         for record in self:
             patient_ids = []
@@ -46,7 +45,6 @@ class SaleOrder(models.Model):
                 set(patient_ids)
             )
 
-    @api.multi
     def _compute_prescription_order_ids(self):
         rx_model = self.env['medical.prescription.order']
         rx_line_model = self.env['medical.prescription.order.line']

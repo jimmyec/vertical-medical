@@ -29,15 +29,19 @@
                         domain="[('is_discontinued', '=', True)]" />
             </xpath>
             <xpath expr="//group" position="inside">
-                <filter string="Patient"
+                <filter name="group_by_patient_id"
+                        string="Patient"
                         domain="[]"
                         context="{'group_by':'patient_id'}" />
-                <filter string="Physician"
+                <filter name="group_by_physician_id"
+                        string="Physician"
                         domain="[]"
                         context="{'group_by':'physician_id'}" />
-                <filter string="Extra Info"
+                <filter name="group_by_notes"
+                        string="Extra Info"
                         domain="[]" context="{'group_by':'notes'}" />
-                <filter string="Medication Template"
+                <filter name="group_by_medication_template"
+                        string="Medication Template"
                         domain="[]"
                         context="{'group_by':'medication_template_id'}" />
             </xpath>
@@ -95,12 +99,8 @@
 
     <record  id="medical_patient_medication_action" model="ir.actions.act_window">
         <field name="name">Medications</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.patient.medication</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">[]</field>
-        <field name="context">{}</field>
         <field name="search_view_id" ref="medical_patient_medication_view_search" />
         <field name="view_id" ref="medical_patient_medication_view_tree" />
     </record>

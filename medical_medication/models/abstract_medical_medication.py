@@ -11,7 +11,6 @@ class AbstractMedicalMedication(models.AbstractModel):
     _name = 'abstract.medical.medication'
     _description = 'Abstract Medical Medication'
 
-    @api.multi
     @api.onchange('medication_template_id')
     def onchange_template_id(self):
         for rec_id in self:

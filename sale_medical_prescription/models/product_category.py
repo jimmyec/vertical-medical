@@ -8,7 +8,6 @@ from odoo import api, models
 class ProductCategory(models.Model):
     _inherit = 'product.category'
 
-    @api.multi
     def _is_descendant_of(self, category_id):
         """ Compute whether provided category is an ancestor of the input """
         self.ensure_one()

@@ -4,7 +4,7 @@
 
 {
     'name': 'Odoo Medical - AGPL',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'category': 'Medical',
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'website': 'https://odoo-community.org/',

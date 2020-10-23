@@ -17,7 +17,6 @@ class MedicalPrescriptionOrderLine(models.Model):
         compute='_compute_is_treatment_stopped'
     )
 
-    @api.multi
     @api.depends('is_course_complete', 'is_treatment_stopped')
     def _compute_active(self, ):
         for rec_id in self:
@@ -26,7 +25,6 @@ class MedicalPrescriptionOrderLine(models.Model):
             else:
                 rec_id.active = True
 
-    @api.multi
     @api.depends('date_stop_treatment')
     def _compute_is_treatment_stopped(self, ):
         for rec_id in self:

@@ -39,9 +39,7 @@
 
     <record model="ir.actions.act_window" id="medical_role_action">
         <field name="name">Roles</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.role</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 

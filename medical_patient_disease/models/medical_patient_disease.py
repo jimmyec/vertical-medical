@@ -131,7 +131,6 @@ class MedicalPatientDisease(models.Model):
         help='Any additional information that may be helpful.',
     )
 
-    @api.multi
     @api.depends('short_comment', 'pathology_id', 'pathology_id.name')
     def _compute_name(self):
         for rec_id in self:
@@ -140,7 +139,6 @@ class MedicalPatientDisease(models.Model):
                 name = '%s - %s' % (name, rec_id.short_comment)
             rec_id.name = name
 
-    @api.multi
     @api.depends('active')
     def _compute_date_expire(self):
         for rec_id in self:
@@ -149,12 +147,10 @@ class MedicalPatientDisease(models.Model):
             else:
                 rec_id.date_expire = fields.Datetime.now()
 
-    @api.multi
     def action_invalidate(self):
         for rec_id in self:
             rec_id.active = False
 
-    @api.multi
     def action_revalidate(self):
         for rec_id in self:
             rec_id.active = True

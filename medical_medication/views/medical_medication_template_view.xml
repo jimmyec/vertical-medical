@@ -22,22 +22,28 @@
                         name="frequency_prn"
                         domain="[('frequency_prn', '=', True)]" />
                 <group expand="0" string="Group By...">
-                    <filter string="Treatment duration"
+                    <filter name="group_by_duration"
+                            string="Treatment duration"
                             domain="[]"
                             context="{'group_by':'duration'}" />
-                    <filter string="Frequency"
+                    <filter name="group_by_frequency"
+                            string="Frequency"
                             domain="[]"
                             context="{'group_by':'frequency'}" />
-                    <filter string="Pathology"
+                    <filter name="group_by_pathology_id"
+                            string="Pathology"
                             domain="[]"
                             context="{'group_by':'pathology_id'}" />
-                    <filter string="Frequency"
+                    <filter name="group_by_medication_dosage_id"
+                            string="Frequency"
                             domain="[]"
                             context="{'group_by':'medication_dosage_id'}" />
-                    <filter string="Administration hours"
+                    <filter name="group_by_suggested_admin_hours"
+                            string="Administration hours"
                             domain="[]"
                             context="{'group_by':'suggested_administration_hours'}" />
-                    <filter string="Dose Unit"
+                    <filter name="group_by_dose_uom_id"
+                            string="Dose Unit"
                             domain="[]"
                             context="{'group_by':'dose_uom_id'}" />
                 </group>
@@ -106,12 +112,8 @@
 
     <record id="medical_medication_template_action" model="ir.actions.act_window">
         <field name="name">Medication Template</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.medication.template</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">[]</field>
-        <field name="context">{}</field>
         <field name="search_view_id" ref="medical_medication_template_view_search" />
         <field name="view_id" ref="medical_medication_template_view_tree" />
     </record>

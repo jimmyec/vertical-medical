@@ -13,7 +13,6 @@ class ProductProduct(models.Model):
         inverse_name='product_id',
     )
 
-    @api.multi
     def name_get(self):
         res = []
         for rec_id in self:

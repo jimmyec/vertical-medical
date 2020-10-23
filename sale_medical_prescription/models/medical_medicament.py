@@ -18,7 +18,6 @@ class MedicalMedicament(models.Model):
         help='Check this if the medicament is a controlled substance',
     )
 
-    @api.multi
     def _compute_is_prescription(self):
         prescription_categ_id = self.env.ref(
             'sale_medical_prescription.product_category_rx'

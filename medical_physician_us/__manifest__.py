@@ -4,7 +4,7 @@
 
 {
     'name': 'Medical Physician - US Locale',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'author': "LasLabs, Odoo Community Association (OCA)",
     "website": "https://laslabs.com",
     "licence": "AGPL-3",

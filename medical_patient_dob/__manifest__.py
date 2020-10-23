@@ -4,7 +4,7 @@
 {
     "name": "Medical Patient DOB",
     "summary": "Show date of birth when searching patients",
-    "version": "10.0.1.0.0",
+    "version": "13.0.0.0.0",
     "category": "Medical",
     "website": "https://laslabs.com/",
     "author": "LasLabs, Odoo Community Association (OCA)",

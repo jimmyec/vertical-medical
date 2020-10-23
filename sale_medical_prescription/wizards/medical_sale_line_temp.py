@@ -48,26 +48,22 @@ class MedicalSaleLineTemp(models.TransientModel):
         comodel_name='medical.prescription.order.line',
     )
 
-    @api.multi
     @api.depends('price_unit', 'product_uom_qty')
     def _compute_all_amounts(self):
         for record in self:
             record.price_subtotal = record.price_unit * record.product_uom_qty
 
-    @api.multi
     def _to_insert(self):
         """ List of insert tuples for ORM methods """
         return list(
             (0, 0, v) for v in self._to_vals_iter()
         )
 
-    @api.multi
     def _to_vals_iter(self):
         """ Generator of values dicts for ORM methods """
         for record in self:
             yield record._to_vals()
 
-    @api.multi
     def _to_vals(self):
         """ Return a values dictionary to create in real model """
         self.ensure_one()

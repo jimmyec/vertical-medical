@@ -47,9 +47,7 @@
 
     <record id="medical_drug_route_action" model="ir.actions.act_window">
         <field name="name">Drug Routes</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.drug.route</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" ref="medical_drug_route_search_view" />
         <field name="res_id" ref="medical_drug_route_tree_view" />

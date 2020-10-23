@@ -5,7 +5,7 @@
 {
     'name': 'Website Sale Medical Prescription US',
     'summary': 'Adds US context to Website Sale Medical Prescription',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'category': 'Website',
     'website': 'https://laslabs.com/',
     'author': 'LasLabs',

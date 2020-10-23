@@ -70,7 +70,6 @@ class MedicalPrescriptionOrder(models.Model):
         string='Transfer Reference',
     )
 
-    @api.multi
     @api.depends('verify_method')
     def _compute_verified(self):
         for record in self:

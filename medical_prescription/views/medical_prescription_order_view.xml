@@ -24,16 +24,20 @@
                         string="Is Verified"
                         domain="[('is_verified', '=', True)]" />
                 <group expand="0" string="Group By...">
-                    <filter string="Patient"
+                    <filter name="group_by_patient"
+                            string="Patient"
                             domain="[]"
                             context="{'group_by':'patient_id'}" />
-                    <filter string="Pharmacy"
+                    <filter name="group_by_partner_id"
+                            string="Pharmacy"
                             domain="[]"
                             context="{'group_by':'partner_id'}" />
-                    <filter string="Prescription Date"
+                    <filter name="group_by_date_prescription"
+                            string="Prescription Date"
                             domain="[]"
                             context="{'group_by':'date_prescription'}" />
-                    <filter string="Prescribing Doctor"
+                    <filter name="group_by_physician_id"
+                            string="Prescribing Doctor"
                             domain="[]"
                             context="{'group_by':'physician_id'}" />
                 </group>
@@ -93,7 +97,6 @@
                                              'default_prescription_order_id': id,
                                              'default_date_start_treatment': date_prescription}">
                                 <tree editable="buttons">
-                                    <!-- <field name="medical_medication_id" /> -->
                                     <field name="medicament_id" />
                                     <field name="medication_template_id" 
                                         domain="[('medicament_id','=',medicament_id)]"/>
@@ -106,9 +109,6 @@
                                     <field name="duration_uom_id" />
                                     <field name="notes" />
                                     <field name="patient_id" invisible="1" readonly="1" />
-<!--                                     <field name="date_start_treatment" />
-                                    <field name="date_stop_treatment" />
- -->                                    <!-- <field name="pathology_id" /> -->
                                 </tree>
                             </field>
                         </page>
@@ -161,14 +161,10 @@
 
     <record id="medical_prescription_order_action" model="ir.actions.act_window">
         <field name="name">Prescription Orders</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.prescription.order</field>
-        <field name="view_type">form</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="search_view_id" ref="medical_prescription_order_view_search" />
         <field name="view_id" ref="medical_prescription_order_view_kanban" />
-        <field name="domain">[]</field>
-        <field name="context">{}</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">Create the first prescription</p>
         </field>

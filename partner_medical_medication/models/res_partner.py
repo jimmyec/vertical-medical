@@ -17,7 +17,6 @@ class ResPartner(models.Model):
         compute='_compute_medication_ids_and_count',
     )
 
-    @api.multi
     @api.depends('patient_ids', 'patient_ids.medication_ids')
     def _compute_medication_ids_and_count(self):
         for record in self:

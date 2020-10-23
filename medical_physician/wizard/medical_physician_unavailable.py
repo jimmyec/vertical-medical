@@ -24,7 +24,6 @@ class MedicalPhysicianUnavailableWizard(models.TransientModel):
         domain=[('is_institution', '=', True)]
     )
 
-    @api.multi
     def action_set_unavailable(self, cr, uid, ids, context=None):
         if not ids:
             return {}

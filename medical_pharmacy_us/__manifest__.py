@@ -8,7 +8,7 @@
     "license": "AGPL-3",
     'installable': True,
     'auto_install': False,
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'author': "LasLabs, Odoo Community Association (OCA)",
     'category': 'Medical',
     'depends': [

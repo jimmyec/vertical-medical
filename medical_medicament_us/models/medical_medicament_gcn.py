@@ -19,7 +19,6 @@ class MedicalMedicamentGcn(models.Model):
         inverse_name='gcn_id',
     )
 
-    @api.multi
     def name_get(self):
         """ Override method to properly display the GCN """
         return [(r.id, '%06d' % r.name) for r in self]

@@ -67,7 +67,6 @@ class MedicalPathology(models.Model):
          'Pathology codes must be unique per Code Type.'),
     ]
 
-    @api.multi
     @api.constrains('parent_id')
     def _check_recursion_parent_id(self):
         if not self._check_recursion():

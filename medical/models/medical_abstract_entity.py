@@ -35,7 +35,6 @@ class MedicalAbstractEntity(models.AbstractModel):
         vals = self._create_vals(vals)
         return super(MedicalAbstractEntity, self).create(vals)
 
-    @api.multi
     def toggle_active(self):
         """ It toggles patient and partner activation. """
         for record in self:
@@ -58,7 +57,7 @@ class MedicalAbstractEntity(models.AbstractModel):
             vals['image'] = self._get_default_image_encoded(vals)
         return vals
 
-    @api.model_cr_context
+    # @api.model_cr_context
     def _allow_image_create(self, vals):
         """ It determines if conditions are present that should stop image gen.
 
@@ -79,7 +78,7 @@ class MedicalAbstractEntity(models.AbstractModel):
                 return False
         return True
 
-    @api.model_cr_context
+    # @api.model_cr_context
     def _create_default_image(self, vals):
         base64_image = self._get_default_image_encoded(vals)
         if not base64_image:
@@ -102,7 +101,7 @@ class MedicalAbstractEntity(models.AbstractModel):
         with open(image_path, 'r') as image:
             return image.read().encode('base64')
 
-    @api.model_cr_context
+    # @api.model_cr_context
     def _get_default_image_path(self, vals):
         """ Overload this in child classes in order to add a default image.
 

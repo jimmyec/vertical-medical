@@ -58,10 +58,12 @@
                 <field name="parent_id" />
                 <field name="attribute_type_id" />
 
-                <filter string="Parent"
+                <filter name="group_by_parent_id"
+                        string="Parent"
                         domain=""
                         context="{'group_by': 'parent_id'}" />
-                <filter string="Type"
+                <filter name="group_by_attribute_type_id"
+                        string="Type"
                         domain=""
                         context="{'group_by': 'attribute_type_id'}" />
             </search>
@@ -71,8 +73,6 @@
     <record id="medical_medicament_attribute_action" model="ir.actions.act_window">
          <field name="name">Medicament Attributes</field>
          <field name="res_model">medical.medicament.attribute</field>
-         <field name="type">ir.actions.act_window</field>
-         <field name="view_type">form</field>
          <field name="view_mode">tree,form</field>
      </record>
 

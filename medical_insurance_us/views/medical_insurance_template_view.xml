@@ -48,13 +48,16 @@
                     <field name="insurance_affiliation" />
                 </xpath>
                 <xpath expr="//group" position="inside">
-                    <filter string="Group Number"
+                    <filter name="group_by_group_number"
+                            string="Group Number"
                             domain="[]"
                             context="{'group_by': 'group_number', }" />
-                    <filter string="Insurance Type"
+                    <filter name="group_by_insurance_type"
+                            string="Insurance Type"
                             domain="[]"
                             context="{'group_by': 'insurance_type', }" />
-                    <filter string="Insurance Affiliation"
+                    <filter name="group_by_insurance_affiliation"
+                            string="Insurance Affiliation"
                             domain="[]"
                             context="{'group_by': 'insurance_affiliation', }" />
                 </xpath>

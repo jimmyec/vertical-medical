@@ -49,7 +49,6 @@ class MedicalMedicament(models.Model):
         comodel_name='medical.medicament',
     )
 
-    @api.multi
     def _compute_brand_ids(self):
         for record in self:
             record.brand_ids = self.search([
@@ -57,7 +56,6 @@ class MedicalMedicament(models.Model):
                 ('gpi', '=', '2'),
             ])
 
-    @api.multi
     def _compute_generic_ids(self):
         for record in self:
             record.generic_ids = self.search([

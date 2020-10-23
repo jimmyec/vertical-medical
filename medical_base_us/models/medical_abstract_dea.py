@@ -62,7 +62,6 @@ class MedicalAbstractDea(models.AbstractModel):
 
         return False
 
-    @api.multi
     def _dea_constrains_helper(self, col_name, country_col='country_id'):
         """ Provide a helper for dea validation via constrain
         Params:

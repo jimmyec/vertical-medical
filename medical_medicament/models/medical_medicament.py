@@ -114,7 +114,6 @@ class MedicalMedicament(models.Model):
         store=True,
     )
 
-    @api.multi
     @api.depends('component_ids')
     def _compute_active_ingredient_ids(self):
         for rec in self:
@@ -123,7 +122,6 @@ class MedicalMedicament(models.Model):
             )
             rec.active_component_ids = [(6, 0, active.ids)]
 
-    @api.multi
     @api.depends('product_id.name',
                  'strength',
                  'strength_uom_id.name',
@@ -140,7 +138,6 @@ class MedicalMedicament(models.Model):
             )
             record.display_name = name
 
-    @api.multi
     def _onchange_uom(self, uom_id, uom_po_id):
         return self.product_id._onchange_uom(uom_id, uom_po_id)
 
@@ -150,7 +147,6 @@ class MedicalMedicament(models.Model):
         vals['is_medicament'] = True
         return super(MedicalMedicament, self).create(vals)
 
-    @api.multi
     def name_get(self):
         return [
             (r.id, r.display_name) for r in self

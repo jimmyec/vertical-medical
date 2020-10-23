@@ -32,7 +32,6 @@ class MedicalAbstractNpi(models.AbstractModel):
         num = '80840%s' % num
         return self._luhn_is_valid(num)
 
-    @api.multi
     def _npi_constrains_helper(self, col_name, country_col='country_id'):
         """ Provide a mixer for Npi validation via constrains
         Params:

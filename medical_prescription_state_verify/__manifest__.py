@@ -5,7 +5,7 @@
 {
     'name': 'Prescription Verification - States and Logic',
     'summary': 'Introduces verified prescription states and related logic',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'category': 'Medical',
     'website': 'https://laslabs.com',

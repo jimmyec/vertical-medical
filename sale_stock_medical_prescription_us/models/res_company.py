@@ -17,7 +17,6 @@ class ResCompany(models.Model):
              'This should be a decimal, such as .75 for 75%.',
     )
 
-    @api.multi
     @api.constrains('medical_prescription_refill_threshold')
     def _check_medical_prescription_refill_threshold(self):
         for record in self:

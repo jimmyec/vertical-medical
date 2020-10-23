@@ -5,7 +5,7 @@
 {
     'name': 'Medical Base - US',
     'summary': 'Provides some helper mixins for US locale',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'category': 'Medical',
     'website': 'https://github.com/OCA/vertical-medical',

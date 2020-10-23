@@ -5,7 +5,7 @@
 {
     'name': 'Medical Pathology - Import Interface',
     'summary': 'Provides an interface for medical pathology data imports',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'category': 'Technical Settings',
     'website': 'https://laslabs.com/',
     'author': 'LasLabs, Odoo Community Association (OCA)',

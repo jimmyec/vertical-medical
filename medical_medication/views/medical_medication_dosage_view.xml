@@ -53,9 +53,7 @@
 
     <record id="medical_medication_dosage_action" model="ir.actions.act_window">
         <field name="name">Medication Dosage</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.medication.dosage</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" ref="medical_medication_dosage_view_search" />
         <field name="view_id" ref="medical_medication_dosage_view_tree" />

@@ -23,7 +23,6 @@
     <record id="medical_pathology_import_action" model="ir.actions.act_window">
         <field name="name">Import Data</field>
         <field name="res_model">medical.pathology.import</field>
-        <field name="view_type">form</field>
         <field name="view_mode">form</field>
     </record>
 

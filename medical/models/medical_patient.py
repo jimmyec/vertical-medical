@@ -51,7 +51,6 @@ class MedicalPatient(models.Model):
         string='Deceased Date',
     )
 
-    @api.multi
     def _compute_age(self):
         """ Age computed depending based on the birth date in the
          membership request.
@@ -80,12 +79,10 @@ class MedicalPatient(models.Model):
             record.age = years_months_days
             record.age_years = years
 
-    @api.multi
     def _compute_is_deceased(self):
         for record in self:
             record.is_deceased = bool(record.date_death)
 
-    @api.multi
     @api.constrains('is_pregnant', 'gender')
     def _check_is_pregnant(self):
         for record in self:
@@ -107,7 +104,7 @@ class MedicalPatient(models.Model):
         })
         return vals
 
-    @api.model_cr_context
+    # @api.model_cr_context
     def _get_default_image_path(self, vals):
         super(MedicalPatient, self)._get_default_image_path(vals)
         return get_module_resource(
@@ -148,7 +145,6 @@ class MedicalPatient(models.Model):
     def toggle_counseling_yn(self):
         self.toggle('counseling_yn')
 
-    @api.multi
     def copy(self, default=None):
         '''
         @param self: object pointer

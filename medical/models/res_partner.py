@@ -44,7 +44,6 @@ class ResPartner(models.Model):
                              ]
     )
 
-    @api.multi
     def _get_medical_entity(self):
         self.ensure_one()
         if self.type and self.type[:7] == 'medical':
@@ -52,7 +51,6 @@ class ResPartner(models.Model):
                 ('partner_id', '=', self.id),
             ])
 
-    @api.multi
     def _compute_patient_ids_and_count(self):
         for record in self:
             patients = self.env['medical.patient'].search([
@@ -61,7 +59,6 @@ class ResPartner(models.Model):
             record.count_patients = len(patients)
             record.patient_ids = [(6, 0, patients.ids)]
 
-    @api.multi
     @api.constrains('birthdate_date')
     def _check_birthdate_date(self):
         """ It will not allow birthdates in the future. """

@@ -9,7 +9,6 @@ from odoo.exceptions import ValidationError
 class MedicalPrescriptionOrder(models.Model):
     _inherit = 'medical.prescription.order'
 
-    @api.multi
     def write(self, vals):
         """
         1) Limit changes to verified orders

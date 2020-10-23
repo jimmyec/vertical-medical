@@ -18,7 +18,6 @@ class MedicalPatient(models.Model):
         compute='_compute_count_appointment_ids',
         string='Appointments',
     )
-    @api.multi
     def _compute_count_appointment_ids(self):
         for rec_id in self:
             rec_id.count_appointment_ids = len(rec_id.appointment_ids)        
