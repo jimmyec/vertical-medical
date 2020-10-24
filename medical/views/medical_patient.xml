@@ -92,6 +92,10 @@
                 <label for="weight" />
                 <div>
                     <field name='weight' class="oe_inline" />
+                    <field name='weight_uom'
+                           class="oe_inline"
+                           placeholder="UoM"
+                           />
                     <!-- <field name='weight_uom'
                            class="oe_inline"
                            placeholder="UoM" /> -->

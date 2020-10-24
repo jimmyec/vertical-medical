@@ -35,14 +35,12 @@ class ResPartner(models.Model):
         ('other', 'Other'),
     ])
     weight = fields.Float()
-    # weight_uom = fields.Many2one(
-    #     string="Weight UoM",
-    #     comodel_name="product.uom",
-    #     default=lambda s: s.env['res.lang'].default_uom_by_category('Weight'),
-    #     domain=lambda self: [('category_id', '=',
-    #                           self.env.ref('product.product_uom_categ_kgm').id)
-    #                          ]
-    # )
+    weight_uom = fields.Many2one(
+        comodel_name="uom.uom",
+        string="Weight UoM",
+        domain=lambda self: [('measure_type', '=','weight')],
+        default=lambda self: self.env['uom.uom'].search([('name', '=', u'kg')]).id
+    )
 
     def _get_medical_entity(self):
         self.ensure_one()
