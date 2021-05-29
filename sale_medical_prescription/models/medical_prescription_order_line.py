@@ -37,7 +37,6 @@ class MedicalPrescriptionOrderLine(models.Model):
         related='prescription_order_id.receive_date',
     )
 
-    @api.multi
     @api.depends('sale_order_line_ids')
     def _compute_orders(self):
         for record in self:

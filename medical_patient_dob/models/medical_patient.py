@@ -8,7 +8,6 @@ from odoo import api, fields, models
 class MedicalPatient(models.Model):
     _inherit = 'medical.patient'
 
-    @api.multi
     def _format_dob(self):
         self.ensure_one()
         date = 'No DoB'
@@ -22,7 +21,6 @@ class MedicalPatient(models.Model):
             )
         return ' [%s]' % date
 
-    @api.multi
     def name_get(self):
         res = []
         for rec_id in self:

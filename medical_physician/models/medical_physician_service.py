@@ -35,7 +35,3 @@ class MedicalPhysicianService(models.Model):
         index=True,
         ondelete='cascade',
     )
-    # service_duration = fields.Selection(
-    #     minutes, string='Duration',
-    #     help='Duration of the appointment in minutes',
-    # )

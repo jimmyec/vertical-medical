@@ -40,7 +40,6 @@ class MedicalPrescriptionOrderLine(models.Model):
         help='Estimated days remaining based on all finished dispenses',
     )
 
-    @api.multi
     def _compute_dispense_remain(self):
         day_uom_id = self.env.ref('medical_medication.product_uom_day')
         for record in self:
@@ -102,7 +101,6 @@ class MedicalPrescriptionOrderLine(models.Model):
             record.dispense_remain_qty = remaining_units
             record.dispense_remain_day = remaining_units / daily_qty
 
-    @api.multi
     @api.depends(
         'qty',
         'dispensed_qty',

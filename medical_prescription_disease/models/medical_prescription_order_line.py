@@ -13,7 +13,6 @@ class MedicalPrescriptionOrderLine(models.Model):
         help='Disease diagnosis related to prescription.',
     )
 
-    @api.multi
     @api.onchange('patient_id')
     def _onchange_patient_id(self, ):
         self.ensure_one()
@@ -26,7 +25,6 @@ class MedicalPrescriptionOrderLine(models.Model):
             }
         }
 
-    @api.multi
     @api.onchange('disease_id')
     def _onchange_disease_id(self, ):
         for rec_id in self:

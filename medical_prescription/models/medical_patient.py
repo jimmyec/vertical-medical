@@ -20,7 +20,6 @@ class MedicalPatient(models.Model):
         compute='_compute_prescription_order_line_ids_and_count',
     )
 
-    @api.multi
     def _compute_prescription_order_line_ids_and_count(self):
         for record in self:
             OrderLine = self.env['medical.prescription.order.line']

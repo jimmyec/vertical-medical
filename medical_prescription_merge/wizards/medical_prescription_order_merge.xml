@@ -30,7 +30,6 @@
     <record id="medical_prescription_order_merge_action" model="ir.actions.act_window">
         <field name="name">Prescription Order Merge Wizard</field>
         <field name="res_model">medical.prescription.order.merge</field>
-        <field name="view_type">form</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>

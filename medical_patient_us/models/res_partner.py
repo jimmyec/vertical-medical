@@ -43,7 +43,6 @@ class ResPartner(models.Model):
         help='US Passport - 9 digits',
     )
 
-    @api.multi
     @api.constrains('country_id', 'ref', 'type')
     def _check_ref(self):
         """ Implement Luhns Formula to validate social security numbers """

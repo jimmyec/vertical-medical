@@ -7,8 +7,10 @@
         <field name="inherit_id" ref="product.product_template_search_view" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']" position="after">
-                <filter string="Is Medicament" name="is_medicament"
-                    domain="[('is_medicament', '=', True)]"/>
+                <filter name="is_medicament"
+                        string="Is Medicament"
+                        domain="[('is_medicament', '=', True)]"
+                />
             </xpath>
         </field>
     </record>

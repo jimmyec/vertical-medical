@@ -21,7 +21,6 @@ class MedicalPatient(models.Model):
         string='Medications',
     )
 
-    @api.multi
     def _compute_count_medication_ids(self):
         for rec_id in self:
             rec_id.count_medication_ids = len(rec_id.medication_ids)

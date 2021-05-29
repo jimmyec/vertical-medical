@@ -5,7 +5,7 @@
 {
     'name': 'Medical Procedures',
     'summary': 'Adds notion of medical procedure used elsewhere in medical',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'category': 'Medical',
     'website': 'https://github.com/OCA/vertical-medical',
     'author': 'LasLabs, Odoo Community Association (OCA)',

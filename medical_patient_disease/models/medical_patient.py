@@ -19,19 +19,16 @@ class MedicalPatient(models.Model):
         string='Diseases',
     )
 
-    @api.multi
     def _compute_count_disease_ids(self):
         for record in self:
             record.count_disease_ids = len(record.disease_ids)
 
-    @api.multi
     def action_invalidate(self):
         for record in self:
             record.active = False
             record.partner_id.active = False
             record.disease_ids.action_invalidate()
 
-    @api.multi
     def action_revalidate(self):
         for record in self:
             record.active = True

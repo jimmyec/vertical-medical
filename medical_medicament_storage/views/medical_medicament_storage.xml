@@ -51,8 +51,6 @@
     <record id="medical_medicament_storage_action" model="ir.actions.act_window">
         <field name="name">Medicament Storage Instructions</field>
         <field name="res_model">medical.medicament.storage</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
      </record>
 

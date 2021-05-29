@@ -22,7 +22,6 @@ class MedicalPharmacy(models.Model):
         compute='_compute_verified_by_id_and_date',
     )
 
-    @api.multi
     @api.depends('is_verified')
     def _compute_verified_by_id_and_date(self):
         for rec_id in self:

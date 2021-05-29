@@ -25,7 +25,6 @@ class MedicalPatient(models.Model):
         compute='_compute_count_allergy_ids',
     )
 
-    @api.multi
     def _compute_count_allergy_ids(self):
         for record in self:
             record.count_allergy_ids = len(record.allergy_ids)

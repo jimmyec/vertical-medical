@@ -20,23 +20,28 @@
                 <field name="chromosome" />
                 <newline />
                 <group expand="0" string="Group By...">
-                    <filter string="Category"
+                    <filter name="group_by_category"
+                            string="Category"
                             domain="[]"
                             context="{'group_by':'category_id'}"
                             />
-                    <filter string="Code Type"
+                    <filter name="group_by_code_type"
+                            string="Code Type"
                             domain="[]"
                             context="{'group_by': 'code_type_id'}"
                             />
-                    <filter string="Protein involved"
+                    <filter name="group_by_protein"
+                            string="Protein involved"
                             domain="[]"
                             context="{'group_by':'protein'}"
                             />
-                    <filter string="Gene"
+                    <filter name="group_by_gene"
+                            string="Gene"
                             domain="[]"
                             context="{'group_by':'gene'}"
                             />
-                    <filter string="Affected Chromosome"
+                    <filter name="group_by_chromosome"
+                            string="Affected Chromosome"
                             domain="[]"
                             context="{'group_by':'chromosome'}"
                             />
@@ -108,14 +113,10 @@
 
     <record id="medical_pathology_action" model="ir.actions.act_window">
         <field name="name">Pathologies</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.pathology</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="medical_pathology_view_tree" />
         <field name="search_view_id" ref="medical_pathology_view_search" />
-        <field name="domain">[]</field>
-        <field name="context">{}</field>
     </record>
 
 </odoo>

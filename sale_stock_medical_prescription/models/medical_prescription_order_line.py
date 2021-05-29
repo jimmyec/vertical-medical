@@ -70,7 +70,6 @@ class MedicalPrescriptionOrderLine(models.Model):
             self.env['product.template']._get_default_uom_id()
         )
 
-    @api.multi
     @api.depends(
         'dispense_uom_id',
         'sale_order_line_ids',
@@ -127,7 +126,6 @@ class MedicalPrescriptionOrderLine(models.Model):
             )
             record.last_dispense_id = last_procurement
 
-    @api.multi
     @api.depends(
         'qty',
         'dispensed_qty',

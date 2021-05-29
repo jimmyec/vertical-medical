@@ -19,7 +19,6 @@ class MedicalPatient(models.Model):
         help='Check if the party is a person.',
     )
 
-    @api.multi
     @api.constrains('parent_id', 'species_id')
     def _check_parent_id(self):
         for rec_id in self:

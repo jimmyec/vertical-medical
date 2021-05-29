@@ -41,7 +41,6 @@ class MedicalPathologyImport(models.TransientModel):
     def _get_importer_types(self):
         return []
 
-    @api.multi
     @api.onchange('importer_type')
     def _onchange_importer_type(self):
         """ It calls gets default data by importer type.
@@ -66,7 +65,6 @@ class MedicalPathologyImport(models.TransientModel):
         record.do_import()
         return record
 
-    @api.multi
     def do_import(self):
         """ It calls the import method for the type of importer.
 
@@ -77,18 +75,15 @@ class MedicalPathologyImport(models.TransientModel):
         method = getattr(self, 'do_import_%s' % self.importer_type)
         method()
 
-    @api.multi
     def _get_pathology_xml_id(self, code):
         """ It returns the XML ID for a pathology code """
         return 'medical_pathology_%s' % code.replace('.', '_')
 
-    @api.multi
     def _get_pathology_category_xml_id(self, name):
         """ IT returns the XML ID for a pathology category by name """
         name = name.replace('.', '_').replace('-', '_')
         return 'medical_pathology_category_%s' % name
 
-    @api.multi
     def _upsert_pathology(
         self, name, code, category, code_type, parent=None, note=None,
     ):
@@ -127,7 +122,6 @@ class MedicalPathologyImport(models.TransientModel):
             self.__create_ir_model_data(xml_id, pathology)
         return pathology
 
-    @api.multi
     def _upsert_pathology_category(
         self, name, code_type, ref, parent=None, note=None,
     ):

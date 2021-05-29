@@ -80,13 +80,16 @@
                 <field name="specialty_ids"/>
             </xpath>
             <xpath expr="//filter" position="after">
-                <filter string="Company"
+                <filter name="group_by_parent_id"
+                        string="Company"
                         domain="[]"
                         context="{'group_by':'parent_id'}"/>
-                <filter string="State"
+                <filter name="group_by_state_id"
+                        string="State"
                         domain="[]"
                         context="{'group_by': 'state_id'}"/>
-                <filter string="Zip"
+                <filter name="group_by_zip"
+                        string="Zip"
                         domain="[]"
                         context="{'group_by': 'zip'}"/>
             </xpath>
@@ -95,9 +98,7 @@
 
     <record model="ir.actions.act_window" id="medical_practitioner_action">
         <field name="name">Practitioners</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.practitioner</field>
-        <field name="view_type">form</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="search_view_id" ref="medical_practitioner_view_search"/>
         <field name="view_ids"

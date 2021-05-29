@@ -9,7 +9,6 @@ from odoo.exceptions import ValidationError
 class MedicalPrescriptionOrderLine(models.Model):
     _inherit = 'medical.prescription.order.line'
 
-    @api.multi
     def write(self, vals):
         """Overload to limit state changes for verified lines"""
         STATE_MODULE = 'medical_prescription_state'

@@ -13,7 +13,6 @@ class ProductPricelist(models.Model):
         compute=lambda s: s._compute_medical_insurance_template_ids()
     )
 
-    @api.multi
     def _compute_medical_insurance_template_ids(self):
         ins_obj = self.env['medical.insurance.template']
         template_ids = ins_obj.search([('pricelist_id', '=', self.id)])

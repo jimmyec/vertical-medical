@@ -6,7 +6,7 @@
 {
     "name": "Medical Medicament",
     "summary": "Introduce Medicament notion into the medical product.",
-    "version": "10.0.1.0.0",
+    "version": "13.0.0.0.0",
     "category": "Medical",
     "website": "https://github.com/OCA/vertical-medical/",
     "author": "ACSONE SA/NV, LasLabs, Odoo Community Association (OCA)",

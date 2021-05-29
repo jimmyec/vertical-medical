@@ -116,19 +116,24 @@
                 <field name="info" />
             </xpath>
             <xpath expr="//filter" position="after">
-                <filter string="Extra info"
+                <filter name="group_by_info"
+                        string="Extra info"
                         domain="[]"
                         context="{'group_by':'info'}" />
-                <filter string="Name"
+                <filter name="group_by_name"
+                        string="Name"
                         domain="[]"
                         context="{'group_by':'name'}" />
-                <filter string="ID"
+                <filter name="group_by_code"
+                        string="ID"
                         domain="[]"
                         context="{'group_by':'code'}" />
-                <filter string="Specialty"
+                <filter name="group_by_specialty_id"
+                        string="Specialty"
                         domain="[]"
                         context="{'group_by':'specialty_id'}" />
-                <filter string="Institution"
+                <filter name="group_by_parent_id"
+                        string="Institution"
                         domain="[]"
                         context="{'group_by':'parent_id'}" />
             </xpath>
@@ -137,9 +142,7 @@
 
     <record model="ir.actions.act_window" id="medical_physician_action">
         <field name="name">Physician</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.physician</field>
-        <field name="view_type">form</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="search_view_id" ref="medical_physician_view_search" />
         <field name="view_ids"

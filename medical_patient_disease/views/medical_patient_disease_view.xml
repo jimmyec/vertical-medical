@@ -47,43 +47,56 @@
                         domain="[('is_infectious', '=', False)]" />
                 <newline />
                 <group expand="0" string="Group By...">
-                    <filter string="Healed"
+                    <filter name="group_by_date_healed"
+                            string="Healed"
                             domain="[]"
                             context="{'group_by':'date_healed'}" />
-                    <filter string="Disease"
+                    <filter name="group_by_pathology_id"
+                            string="Disease"
                             domain="[]"
                             context="{'group_by':'pathology_id'}" />
-                    <filter string="Allergic Disease"
+                    <filter name="group_by_is_allergy"
+                            string="Allergic Disease"
                             domain="[]"
                             context="{'group_by':'is_allergy'}" />
-                    <filter string="Physician"
+                    <filter name="group_by_physician_id"
+                            string="Physician"
                             domain="[]"
                             context="{'group_by':'physician_id'}" />
-                    <filter string="Pregnancy warning"
+                    <filter name="group_by_is_pregnant"
+                            string="Pregnancy warning"
                             domain="[]"
                             context="{'group_by':'is_pregnant'}" />
-                    <filter string="Contracted in pregnancy week #"
+                    <filter name="group_by_weeks_of_pregnancy"
+                            string="Contracted in pregnancy week #"
                             domain="[]"
                             context="{'group_by':'weeks_of_pregnancy'}" />
-                    <filter string="Currently on Treatment"
+                    <filter name="group_by_is_on_treatment"
+                            string="Currently on Treatment"
                             domain="[]"
                             context="{'group_by':'is_on_treatment'}" />
-                    <filter string="Date of Diagnosis"
+                    <filter name="group_by_diagnosed"
+                            string="Date of Diagnosis"
                             domain="[]"
                             context="{'group_by':'date_diagnosed'}" />
-                    <filter string="Infectious Disease"
+                    <filter name="group_by_is_infectious"
+                            string="Infectious Disease"
                             domain="[]"
                             context="{'group_by':'is_infectious'}" />
-                    <filter string="Patient"
+                    <filter name="group_by_patient_id"
+                            string="Patient"
                             domain="[]"
                             context="{'group_by':'patient_id'}" />
-                    <filter string="Age when diagnosed"
+                    <filter name="group_by_age"
+                            string="Age when diagnosed"
                             domain="[]"
                             context="{'group_by':'age'}" />
-                    <filter string="Start"
+                    <filter name="group_by_date_treatment_start"
+                            string="Start"
                             domain="[]"
                             context="{'group_by':'date_treatment_start'}" />
-                    <filter string="State"
+                    <filter name="group_by_state"
+                            string="State"
                             domain="[]"
                             context="{'group_by':'state'}" />
                 </group>
@@ -181,9 +194,7 @@
 
     <record id="medical_patient_disease_action" model="ir.actions.act_window">
         <field name="name">Patient Diseases</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.patient.disease</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 

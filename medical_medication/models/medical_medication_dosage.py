@@ -26,7 +26,6 @@ class MedicalMedicationDosage(models.Model):
         ('name_uniq', 'UNIQUE(name)', 'Name must be unique!'),
     ]
 
-    @api.multi
     @api.constrains('abbreviation')
     def _check_abbreviation_unique(self):
         for rec_id in self:
@@ -40,7 +39,6 @@ class MedicalMedicationDosage(models.Model):
                         ),
                     ))
 
-    @api.multi
     @api.constrains('code')
     def _check_code_unique(self):
         for rec_id in self:

@@ -58,7 +58,6 @@ class MedicalPrescriptionOrderLine(models.Model):
                 pass
         return super(MedicalPrescriptionOrderLine, self).create(vals)
 
-    @api.multi
     @api.constrains('refill_qty_original')
     def _check_refill_qty_original(self):
         for rec_id in self:

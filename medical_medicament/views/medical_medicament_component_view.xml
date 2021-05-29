@@ -49,9 +49,7 @@
 
      <record model="ir.actions.act_window" id="medical_medicament_component_action">
          <field name="name">Medicament Component</field>
-         <field name="type">ir.actions.act_window</field>
          <field name="res_model">medical.medicament.component</field>
-         <field name="view_type">form</field>
          <field name="view_mode">tree,form</field>
      </record>
 

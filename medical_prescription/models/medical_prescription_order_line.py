@@ -68,7 +68,6 @@ class MedicalPrescriptionOrderLine(models.Model):
         self.dispense_uom_id = \
             self.medical_medication_id.medicament_id.uom_id.id
 
-    @api.multi
     def _compute_is_expired(self):
         now = datetime.datetime.now()
         for record in self:
@@ -76,7 +75,6 @@ class MedicalPrescriptionOrderLine(models.Model):
             record.is_expired = stop and stop < now
             
     # Borrar registro en medical.medication
-    @api.multi
     def unlink(self):
         unlink_lines = self.env['medical.prescription.order.line']
         unlink_medication = self.env['medical.patient.medication']

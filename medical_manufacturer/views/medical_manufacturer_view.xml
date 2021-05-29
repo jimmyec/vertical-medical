@@ -81,24 +81,25 @@
                  <field name="zip" />
             </xpath>
             <xpath expr="//filter" position="after">
-                <filter string="Company"
-                            domain="[]"
-                            context="{'group_by':'parent_id'}" />
-                    <filter string="State"
-                            domain="[]"
-                            context="{'group_by': 'state_id'}" />
-                    <filter string="Zip"
-                            domain="[]"
-                            context="{'group_by':'zip'}" />
+                <filter name="group_by_parent_id"
+                        string="Company"
+                        domain="[]"
+                        context="{'group_by':'parent_id'}" />
+                <filter name="group_by_state_id"
+                        string="State"
+                        domain="[]"
+                        context="{'group_by': 'state_id'}" />
+                <filter name="group_by_zip"
+                        string="Zip"
+                        domain="[]"
+                        context="{'group_by':'zip'}" />
             </xpath>
          </field>
      </record>
 
      <record id="medical_manufacturer_action" model="ir.actions.act_window">
          <field name="name">Medical Manufacturers</field>
-         <field name="type">ir.actions.act_window</field>
          <field name="res_model">medical.manufacturer</field>
-         <field name="view_type">form</field>
          <field name="view_mode">kanban,tree,form</field>
          <field name="search_view_id" ref="medical_manufacturer_view_search" />
          <field name="view_ids"

@@ -28,7 +28,8 @@
                 <field name="medical_center_secondary_ids" />
             </xpath>
             <xpath expr="//search" position="inside">
-                <filter string="Primary Medical Center"
+                <filter name="group_by_center_primary_id"
+                        string="Primary Medical Center"
                         context="{'group_by': 'medical_center_primary_id'}"
                         />
             </xpath>

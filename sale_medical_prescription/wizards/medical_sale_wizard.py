@@ -69,7 +69,6 @@ class MedicalSaleWizard(models.TransientModel):
         if len(default_order_lines):
             return default_order_lines[0].prescription_order_id.partner_id
 
-    @api.multi
     def action_create_sale_wizards(self):
 
         self.ensure_one()
@@ -174,7 +173,6 @@ class MedicalSaleWizard(models.TransientModel):
             self.state = 'done'
             return self.action_rx_sale_conversions()
 
-    @api.multi
     def action_rx_sale_conversions(self):
         self.ensure_one()
         sale_obj = self.env['sale.order']

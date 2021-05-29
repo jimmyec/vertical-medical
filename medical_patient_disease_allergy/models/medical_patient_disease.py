@@ -15,7 +15,6 @@ class MedicalPatientDisease(models.Model):
         help='Check this box to indicate that the disease is an allergy.',
     )
 
-    @api.multi
     @api.depends('pathology_id.code_type_id')
     def _compute_is_allergy(self):
         allergy_code = self.env.ref(

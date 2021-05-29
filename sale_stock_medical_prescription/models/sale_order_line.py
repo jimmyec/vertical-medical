@@ -18,7 +18,6 @@ class SaleOrderLine(models.Model):
         compute='_compute_dispense_qty',
     )
 
-    @api.multi
     @api.depends(
         'product_uom',
         'product_uom_qty',
@@ -37,7 +36,6 @@ class SaleOrderLine(models.Model):
                     rx_line.dispense_uom_id,
                 )
 
-    @api.multi
     @api.constrains('product_id', 'prescription_order_line_id')
     def _check_product(self):
         if self.env.context.get('__rx_force__'):
@@ -58,7 +56,6 @@ class SaleOrderLine(models.Model):
                 else:
                     pass
 
-    @api.multi
     @api.constrains('dispense_qty', 'prescription_order_line_id', 'state')
     def _check_can_dispense(self):
         if self.env.context.get('__rx_force__'):
@@ -90,7 +87,6 @@ class SaleOrderLine(models.Model):
                     record.dispense_qty - rx_line.can_dispense_qty
                 ))
 
-    @api.multi
     def _prepare_order_line_procurement(self, group_id=False):
         self.ensure_one()
         res = super(SaleOrderLine, self)._prepare_order_line_procurement(

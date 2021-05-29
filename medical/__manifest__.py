@@ -4,11 +4,10 @@
 
 {
     'name': 'Odoo Medical',
-    'version': '10.0.1.0.4',
+    'version': '13.0.0.0.0',
     'category': 'Medical',
     'depends': [
         'product',
-        'base_locale_uom_default'
     ],
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'website': 'https://odoo-community.org/',

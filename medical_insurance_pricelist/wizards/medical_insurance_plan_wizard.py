@@ -38,7 +38,6 @@ class MedicalInsurancePlanWizard(models.TransientModel):
             self._context.get('active_id')
         )
 
-    @api.multi
     def action_create_plan(self):
         self.ensure_one()
         plan_obj = self.env['medical.insurance.plan']

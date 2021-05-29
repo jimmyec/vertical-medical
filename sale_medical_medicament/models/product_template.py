@@ -14,7 +14,6 @@ class ProductTemplate(models.Model):
         related='product_variant_ids.medicament_ids',
     )
 
-    @api.multi
     def name_get(self):
         res = []
         for rec_id in self:

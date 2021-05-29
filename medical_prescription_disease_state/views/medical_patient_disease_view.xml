@@ -22,11 +22,6 @@
                         widget="statinfo" string="Prescription Order Lines"/>
                 </button>
             </xpath>
-<!--                 <xpath expr="//group[@name='main']" position="inside">
-                <group name="last_rx">
-                    <field name="last_prescription_order_line_id" />
-                </group>
-            </xpath> -->
         </field>
     </record>
 

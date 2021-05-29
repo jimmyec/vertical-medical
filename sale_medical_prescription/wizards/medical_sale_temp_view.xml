@@ -141,9 +141,7 @@
 
     <record id="medical_sale_temp_action" model="ir.actions.act_window">
         <field name="name">Temp Sale for Rx</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.sale.temp</field>
-        <field name="view_type">form</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="medical_sale_temp_view_form" />
     </record>

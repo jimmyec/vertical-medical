@@ -60,14 +60,10 @@
 
     <record id="medical_pathology_group_action" model="ir.actions.act_window">
         <field name="name">Pathology Group</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.pathology.group</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="medical_pathology_group_view_tree" />
         <field name="search_view_id" ref="medical_pathology_group_view_search" />
-        <field name="domain">[]</field>
-        <field name="context">{}</field>
     </record>
 
 </odoo>

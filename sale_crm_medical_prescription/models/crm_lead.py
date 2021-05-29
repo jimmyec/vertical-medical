@@ -35,7 +35,6 @@ class CrmLead(models.Model):
         compute='_compute_prescription_order_and_patient_ids',
     )
 
-    @api.multi
     def _compute_prescription_order_and_patient_ids(self):
         prescription_ids = self.env['medical.prescription.order']
         patient_ids = self.env['medical.patient']

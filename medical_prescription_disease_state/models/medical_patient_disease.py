@@ -20,7 +20,6 @@ class MedicalPatientDisease(models.Model):
         related='last_prescription_order_line_id.active',
     )
 
-    @api.multi
     def _compute_prescription_order_lines(self, ):
         for rec_id in self:
             line_ids = rec_id.prescription_order_line_ids

@@ -46,16 +46,17 @@
             <search>
                 <field name="code"/>
                 <field name="name"/>
-                <filter string="Inactive" domain="[('active', '=', False)]"/>
+                <filter name="group_by_inactive"
+                        string="Inactive"
+                        domain="[('active', '=', False)]"
+                        />
             </search>
         </field>
     </record>
 
     <record id="medical_procedure_action" model="ir.actions.act_window">
         <field name="name">Procedures</field>
-        <field name="type">ir.actions.act_window</field>
         <field name="res_model">medical.procedure</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" ref="medical_procedure_view_search"/>
     </record>

@@ -125,12 +125,10 @@ class MedicalSaleTemp(models.TransientModel):
             self._context.get('active_id')
         )
 
-    @api.multi
     def _compute_line_cnt(self):
         for record in self:
             record.line_cnt = len(record.order_line)
 
-    @api.multi
     def _compute_all_amounts(self):
         for record in self:
             untaxed = 0.0
@@ -138,7 +136,6 @@ class MedicalSaleTemp(models.TransientModel):
                 untaxed += line.price_subtotal
             record.amount_untaxed = untaxed
 
-    @api.multi
     def action_next_wizard(self):
         self.ensure_one()
         self.state = 'done'
@@ -146,20 +143,17 @@ class MedicalSaleTemp(models.TransientModel):
         _logger.debug('next_wizard: %s', wizard_action)
         return wizard_action
 
-    @api.multi
     def _to_insert(self):
         """ List of insert tuples for ORM methods """
         return list(
             (0, 0, v) for v in self._to_vals_iter()
         )
 
-    @api.multi
     def _to_vals_iter(self):
         """ Generator of values dicts for ORM methods """
         for record in self:
             yield self._to_vals()
 
-    @api.multi
     def _to_vals(self):
         """ Return a values dictionary to create in real model """
         self.ensure_one()

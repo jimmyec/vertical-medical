@@ -58,16 +58,21 @@
                     <field name="notes" />
                     <newline />
                     <group expand="0" string="Group By...">
-                        <filter string="Default template"
+                        <filter name="group_by_is_default"
+                                string="Default template"
                                 domain="[]"
                                 context="{'group_by':'is_default'}" />
-                        <filter string="Insurance Company"
+                        <filter name="group_by_"
+                                string="Insurance Company"
                                 domain="[]"
                                 context="{'group_by':'insurance_company_id'}" />
-                        <filter string="Insurance Product"
+                        <filter name="group_by_product_id"
+                                string="Insurance Product"
                                 domain="[]"
                                 context="{'group_by':'product_id'}" />
-                        <filter string="Plan" domain="[]"
+                        <filter name="group_by_plan_number"
+                                string="Plan" 
+                                domain="[]"
                                 context="{'group_by':'plan_number'}" />
                     </group>
                 </search>
@@ -76,9 +81,7 @@
 
         <record model="ir.actions.act_window" id="medical_insurance_template_action">
             <field name="name">Insurance Plan Templates</field>
-            <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.insurance.template</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="search_view_id" ref="medical_insurance_template_view_search" />
             <field name="domain">[]</field>

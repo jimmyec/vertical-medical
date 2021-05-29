@@ -71,7 +71,6 @@ class MedicalPrescriptionOrder(models.Model):
         attachment=True,
     )
 
-    @api.multi
     @api.depends('image')
     def _compute_images(self):
         for record in self:
@@ -97,7 +96,6 @@ class MedicalPrescriptionOrder(models.Model):
     
         return result
 
-    @api.multi
     @api.depends('prescription_order_line_ids',
                  'prescription_order_line_ids.active',
                  )
@@ -110,7 +108,6 @@ class MedicalPrescriptionOrder(models.Model):
                 rec_id.prescription_order_line_ids.mapped('active')
             )
 
-    @api.multi
     def copy(self, default=None):
         '''
         @param self: object pointer

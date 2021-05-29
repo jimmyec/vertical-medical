@@ -5,7 +5,7 @@
 {
     "name": "Partner Medical Medication",
     "summary": "Add a medication button to the partner form view",
-    "version": "10.0.1.0.0",
+    "version": "13.0.0.0.0",
     "category": "Medical",
     "website": "https://laslabs.com/",
     "author": "LasLabs",

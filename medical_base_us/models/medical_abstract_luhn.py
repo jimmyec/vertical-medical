@@ -40,7 +40,6 @@ class MedicalAbstractLuhn(models.AbstractModel):
         )
         return (checksum % 10) == 0
 
-    @api.multi
     def _luhn_constrains_helper(self, col_name, country_col='country_id'):
         """ Provide a mixer for Luhn validation via constrains
         Params:

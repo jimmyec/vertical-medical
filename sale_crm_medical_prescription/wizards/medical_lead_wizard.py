@@ -44,7 +44,6 @@ class MedicalLeadWizard(models.TransientModel):
         if len(default_order_lines):
             return default_order_lines[0].prescription_order_id.partner_id
 
-    @api.multi
     def action_create_leads(self):
         order_map = defaultdict(list)
 

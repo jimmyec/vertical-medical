@@ -63,7 +63,6 @@ class MedicalMedicationTemplate(models.Model):
         help='Measurement unit for dosage quantity',
     )
 
-    @api.multi
     def name_get(self):
         res = []
         for rec_id in self:

@@ -22,7 +22,6 @@ class MedicalPatientSpecies(models.Model):
         default=False,
     )
 
-    @api.multi
     def unlink(self):
         for record in self:
             if record.id == self.env.ref('medical_patient_species.human').id:

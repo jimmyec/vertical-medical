@@ -29,8 +29,11 @@
                 <field name="disease_id"/>
             </xpath>
             <xpath expr="//group" position="inside">
-                <filter string="Disease"
-                    domain="[]" context="{'group_by':'disease_id'}" />
+                <filter name="group_by_disease"
+                        string="Disease"
+                        domain="[]" 
+                        context="{'group_by':'disease_id'}"
+                        />
             </xpath>
         </field>
     </record>

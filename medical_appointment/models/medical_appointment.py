@@ -129,7 +129,6 @@ class MedicalAppointment(models.Model):
         'stage_id': lambda s: s._group_stage_ids(),
     }
 
-    @api.multi
     @api.depends('appointment_date', 'duration')
     def _compute_appointment_end_date(self):
         for rec_id in self:
@@ -149,7 +148,6 @@ class MedicalAppointment(models.Model):
         )
         return stage_id
 
-    @api.multi
     def _group_stage_ids(self, read_group_order=None,
                          access_rights_uid=None):
 
@@ -180,7 +178,6 @@ class MedicalAppointment(models.Model):
 
         return result, fold
 
-    @api.multi
     @api.constrains('physician_id', 'appointment_date', 'duration',
                     'force_schedule')
     def _check_not_double_booking(self):
@@ -200,14 +197,12 @@ class MedicalAppointment(models.Model):
                     'schedule anyways.'
                 ))
 
-    @api.multi
     def write(self, vals, ):
         result = super(MedicalAppointment, self).write(vals)
         if 'stage_id' in vals:
             self._change_stage(vals)
         return result
 
-    @api.multi
     def _change_stage(self, vals):
         """ @TODO: replace in SMD-118 """
 
@@ -320,7 +315,6 @@ class MedicalAppointment(models.Model):
 
         return result
 
-    @api.multi
     def copy(self, default=None):
         '''
         @param self: object pointer

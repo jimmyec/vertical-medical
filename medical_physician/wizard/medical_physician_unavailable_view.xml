@@ -31,9 +31,7 @@
 
         <record model="ir.actions.act_window" id="medical_physician_unavailable_wizard_act">
             <field name="name">Block Off Schedule</field>
-            <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.physician.unavailable.wizard</field>
-            <field name="view_type">form</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
         </record>

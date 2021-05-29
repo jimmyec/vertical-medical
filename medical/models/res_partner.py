@@ -36,15 +36,12 @@ class ResPartner(models.Model):
     ])
     weight = fields.Float()
     weight_uom = fields.Many2one(
+        comodel_name="uom.uom",
         string="Weight UoM",
-        comodel_name="product.uom",
-        default=lambda s: s.env['res.lang'].default_uom_by_category('Weight'),
-        domain=lambda self: [('category_id', '=',
-                              self.env.ref('product.product_uom_categ_kgm').id)
-                             ]
+        domain=lambda self: [('measure_type', '=','weight')],
+        default=lambda self: self.env['uom.uom'].search([('name', '=', u'kg')]).id
     )
 
-    @api.multi
     def _get_medical_entity(self):
         self.ensure_one()
         if self.type and self.type[:7] == 'medical':
@@ -52,7 +49,6 @@ class ResPartner(models.Model):
                 ('partner_id', '=', self.id),
             ])
 
-    @api.multi
     def _compute_patient_ids_and_count(self):
         for record in self:
             patients = self.env['medical.patient'].search([
@@ -61,7 +57,6 @@ class ResPartner(models.Model):
             record.count_patients = len(patients)
             record.patient_ids = [(6, 0, patients.ids)]
 
-    @api.multi
     @api.constrains('birthdate_date')
     def _check_birthdate_date(self):
         """ It will not allow birthdates in the future. """

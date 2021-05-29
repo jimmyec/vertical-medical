@@ -5,7 +5,7 @@
 {
     'name': 'Medical Practitioner - US Locale',
     'summary': 'Adds several US IDs to medical practitioners',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'website': 'https://github.com/OCA/vertical-medical',
     'license': 'AGPL-3',

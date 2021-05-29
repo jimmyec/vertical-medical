@@ -58,7 +58,6 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
             'dest_order_id': [('id', 'in', self.merge_order_ids.ids)],
         }}
 
-    @api.multi
     def action_merge(self):
         self.ensure_one()
         self._perform_validations()
@@ -68,7 +67,6 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
 
         return {'type': 'ir.actions.act_window_close'}
 
-    @api.multi
     def _perform_validations(self):
         if len(self.merge_order_ids) < 2:
             raise ValidationError(_(
@@ -95,7 +93,6 @@ class MedicalPrescriptionOrderMerge(models.TransientModel):
                     ' try again.'
                 ))
 
-    @api.multi
     def _perform_merge(self, source_orders, dest_order):
         merge_data = {}
 

@@ -6,7 +6,7 @@
 
     'name': 'Medical Website - Insurance Pricelist',
     'description': 'Adds Insurance logic to Website pricelists',
-    'version': '10.0.1.0.0',
+    'version': '13.0.0.0.0',
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'category': 'Medical',
     'depends': [
