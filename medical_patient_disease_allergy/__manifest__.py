@@ -18,7 +18,7 @@
     "data": [
         "data/medical_pathology_code_type.xml",
         "views/medical_patient_disease_view.xml",
-        "views/medical_patient_view.xml",
+        # "views/medical_patient_view.xml",
     ],
     "demo": [
         "demo/medical_pathology_demo.xml",

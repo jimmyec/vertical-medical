@@ -27,21 +27,19 @@ class MedicalPatientDisease(models.Model):
     pathology_id = fields.Many2one(
         string='Pathology',
         comodel_name='medical.pathology',
-        index=True,
         required=True,
         help='Pathology (disease type) the patient was diagnosed with.',
     )
     physician_id = fields.Many2one(
         string='Physician',
         comodel_name='medical.physician',
-        index=True,
         help='Physician that diagnosed this disease.',
     )
     patient_id = fields.Many2one(
         string='Patient',
-        comodel_name='medical.patient',
+        comodel_name='res.partner',
         required=True,
-        index=True,
+        ondelete='cascade',
         help='Patient that was diagnosed with this disease.',
     )
     disease_severity = fields.Selection(

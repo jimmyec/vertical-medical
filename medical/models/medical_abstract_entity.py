@@ -12,7 +12,7 @@ class MedicalAbstractEntity(models.AbstractModel):
     _name = 'medical.abstract.entity'
     _description = 'Medical Abstract Entity'
     _inherits = {'res.partner': 'partner_id'}
-    _inherit = ['mail.thread']
+    # _inherit = 'mail.thread'
 
     # Redefine ``active`` so that it is managed independently from partner.
     active = fields.Boolean(

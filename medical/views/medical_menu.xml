@@ -7,7 +7,7 @@
     <menuitem id="medical_root"
               name="Medical"
               sequence="10"
-              web_icon="medical,static/description/icon.png"
+              parent="education_core.menu_education_main_menu" 
               />
 
     <menuitem id="medical_patient_root"
@@ -20,8 +20,8 @@
               name="Patient"
               parent="medical_patient_root"
               sequence="10"
-              action="medical_patient_action"
               />
+              <!-- action="medical_patient_action" -->
 
     <menuitem id="medical_root_sub"
               name="Configuration"

@@ -14,33 +14,33 @@ class ResPartner(models.Model):
     type = fields.Selection(selection_add=[
         ('medical.patient', 'Medical Patient'),
     ])
-    alias = fields.Char(
-        string='Alias',
-        help='Common name that the Party is referred',
-    )
-    patient_ids = fields.One2many(
-        string='Related Patients',
-        comodel_name='medical.patient',
-        compute='_compute_patient_ids_and_count',
-    )
-    count_patients = fields.Integer(
-        compute='_compute_patient_ids_and_count',
-    )
-    birthdate_date = fields.Date(
-        string='Birthdate',
-    )
+    # alias = fields.Char(
+    #     string='Alias',
+    #     help='Common name that the Party is referred',
+    # )
+    # patient_ids = fields.One2many(
+    #     string='Related Patients',
+    #     comodel_name='medical.patient',
+    #     compute='_compute_patient_ids_and_count',
+    # )
+    # count_patients = fields.Integer(
+    #     compute='_compute_patient_ids_and_count',
+    # )
+    # birthdate_date = fields.Date(
+    #     string='Birthdate',
+    # )
     gender = fields.Selection([
         ('male', 'Male'),
         ('female', 'Female'),
         ('other', 'Other'),
     ])
-    weight = fields.Float()
-    weight_uom = fields.Many2one(
-        comodel_name="uom.uom",
-        string="Weight UoM",
-        domain=lambda self: [('measure_type', '=','weight')],
-        default=lambda self: self.env['uom.uom'].search([('name', '=', u'kg')]).id
-    )
+    # weight = fields.Float()
+    # weight_uom = fields.Many2one(
+    #     comodel_name="uom.uom",
+    #     string="Weight UoM",
+    #     domain=lambda self: [('measure_type', '=','weight')],
+    #     default=lambda self: self.env['uom.uom'].search([('name', '=', u'kg')]).id
+    # )
 
     def _get_medical_entity(self):
         self.ensure_one()
@@ -49,26 +49,26 @@ class ResPartner(models.Model):
                 ('partner_id', '=', self.id),
             ])
 
-    def _compute_patient_ids_and_count(self):
-        for record in self:
-            patients = self.env['medical.patient'].search([
-                ('partner_id', 'child_of', record.id),
-            ])
-            record.count_patients = len(patients)
-            record.patient_ids = [(6, 0, patients.ids)]
+    # def _compute_patient_ids_and_count(self):
+    #     for record in self:
+    #         patients = self.env['medical.patient'].search([
+    #             ('partner_id', 'child_of', record.id),
+    #         ])
+    #         record.count_patients = len(patients)
+    #         record.patient_ids = [(6, 0, patients.ids)]
 
-    @api.constrains('birthdate_date')
-    def _check_birthdate_date(self):
-        """ It will not allow birthdates in the future. """
-        now = datetime.now()
-        for record in self:
-            if not record.birthdate_date:
-                continue
-            birthdate = fields.Datetime.from_string(record.birthdate_date)
-            if birthdate > now:
-                raise ValidationError(_(
-                    'Partners cannot be born in the future.',
-                ))
+    # @api.constrains('birthdate_date')
+    # def _check_birthdate_date(self):
+    #     """ It will not allow birthdates in the future. """
+    #     now = datetime.now()
+    #     for record in self:
+    #         if not record.birthdate_date:
+    #             continue
+    #         birthdate = fields.Datetime.from_string(record.birthdate_date)
+    #         if birthdate > now:
+    #             raise ValidationError(_(
+    #                 'Partners cannot be born in the future.',
+                # ))
 
     @api.model
     def create(self, vals):

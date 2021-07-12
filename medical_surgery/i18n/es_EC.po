@@ -1,0 +1,532 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* medical_surgery
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-13 00:27+0000\n"
+"PO-Revision-Date: 2021-06-12 19:37-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_EC\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__asa_ps
+msgid "ASA PS"
+msgstr "ASA PS"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__anesthesia_report
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_surgery_form
+msgid "Anesthesia Report"
+msgstr "Informe de anestesia"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__anesthetist
+msgid "Anesthetist"
+msgstr "Anestesista"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__antibiotic_prophylaxis
+msgid "Antibiotic Prophylaxis"
+msgstr "Profilaxis antibiótica"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__base_condition
+msgid "Base Condition"
+msgstr "Condición base"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__mallampati_score__class1
+msgid "Class 1: Full visibilty of tonsils, uvula and soft palate"
+msgstr "Clase 1: Visibilidad completa de amígdalas, úvula y paladar blando."
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__mallampati_score__class2
+msgid ""
+"Class 2: Visibility of hard and soft palate, upper portion of tonsils and "
+"uvula"
+msgstr ""
+"Clase 2: Visibilidad del paladar duro y blando, porción superior de las "
+"amígdalas y úvula."
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__mallampati_score__class3
+msgid "Class 3: Soft and hard palate and base of the uvula are visible"
+msgstr ""
+"Clase 3: El paladar blando y duro y la base de la úvula son visibles."
+
+#. module: medical_surgery
+#. openerp-web
+#: code:addons/medical_surgery/static/src/js/webcam_widget.js:0
+#, python-format
+msgid "Close"
+msgstr "cerrar"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_procedure__name
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__name
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__name
+msgid "Code"
+msgstr "Código"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area__create_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector__create_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_procedure__create_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__create_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__create_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area__create_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector__create_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_procedure__create_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__create_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__create_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__surgery_date_start
+msgid "Date of Surgery"
+msgstr "Fecha de Cirugía"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__details
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_surgery_form
+msgid "Details/Incidents"
+msgstr "Detalles / Incidencias"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area__display_name
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector__display_name
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_procedure__display_name
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__display_name
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__display_name
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__duration
+msgid "Duration"
+msgstr "Duración"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__surgery_classification__emergency
+msgid "Emergency"
+msgstr "Emergencia"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__surgery_date_end
+msgid "End of Surgery"
+msgstr "Fin de la Cirugía"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area__extra_information
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector__extra_information
+msgid "Extra Information"
+msgstr "Información extra"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__physician_id
+msgid "Health Professional"
+msgstr "Profesional de la salud"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__high_risk_surgery
+msgid "High Risk Surgery"
+msgstr "Cirugía de alto riesgo"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__cerebrovascular_disease
+msgid "History of Cerebrovascular Disease"
+msgstr "Historia de enfermedad cerebrovascular"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__congestive_heart_disease
+msgid "History of Congestive Heart Disease"
+msgstr "Historia de enfermedad cardíaca congestiva"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__ischemic_heart_disease
+msgid "History of Ischemic Heart Disease"
+msgstr "Historia de la cardiopatía isquémica"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area__id
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector__id
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_procedure__id
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__id
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__id
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure__id
+msgid "ID"
+msgstr ""
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_rcri__rcri_class__2
+msgid "II"
+msgstr ""
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_rcri__rcri_class__3
+msgid "III"
+msgstr ""
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_rcri__rcri_class__4
+msgid "IV"
+msgstr ""
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area____last_update
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector____last_update
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_procedure____last_update
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri____last_update
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery____last_update
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure____last_update
+msgid "Last Modified on"
+msgstr "Fecha de modificación"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area__write_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector__write_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_procedure__write_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__write_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__write_uid
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure__write_uid
+msgid "Last Updated by"
+msgstr "Ultima Actualización por"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area__write_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector__write_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_procedure__write_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__write_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__write_date
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure__write_date
+msgid "Last Updated on"
+msgstr "Actualizado en"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__mallampati_score
+msgid "Mallampati Score"
+msgstr "Puntuación de Mallampati"
+
+#. module: medical_surgery
+#: model:ir.model,name:medical_surgery.model_medical_operating_area
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_operating_area_form
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_operating_area_search
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_operating_area_tree
+msgid "Medical Operating Area"
+msgstr "Área de Operación"
+
+#. module: medical_surgery
+#: model:ir.model,name:medical_surgery.model_medical_operating_sector
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_operating_sector_form
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_operating_sector_search
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_operating_sector_tree
+msgid "Medical Operating Sector"
+msgstr "Sector Operación"
+
+#. module: medical_surgery
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_procedure_form
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_procedure_search
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_procedure_tree
+msgid "Medical Procedure"
+msgstr "Procedimiento médico"
+
+#. module: medical_surgery
+#: model:ir.actions.act_window,name:medical_surgery.medical_procedure_action
+#: model:ir.model,name:medical_surgery.model_medical_procedure
+#: model:ir.ui.menu,name:medical_surgery.medical_procedure_menu
+#: model:ir.ui.menu,name:medical_surgery.medical_root_procedure
+msgid "Medical Procedures"
+msgstr "Procedimientos"
+
+#. module: medical_surgery
+#: model:ir.actions.act_window,name:medical_surgery.medical_surgery_action
+#: model:ir.model,name:medical_surgery.model_medical_surgery
+#: model:ir.ui.menu,name:medical_surgery.medical_surgery_menu
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_surgery_form
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_surgery_search
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_surgery_tree
+msgid "Medical Surgery"
+msgstr "Cirugía"
+
+#. module: medical_surgery
+#: model:ir.model,name:medical_surgery.model_medical_surgery_procedure
+msgid "Medical Surgery Procedure"
+msgstr "Procedimiento de cirugía"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area__name
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: medical_surgery
+#: code:addons/medical_surgery/models/medical_procedure.py:0
+#: code:addons/medical_surgery/models/medical_rcri.py:0
+#: code:addons/medical_surgery/models/medical_surgery.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure__notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__mallampati_score__class4
+msgid "Only hard palate is visible"
+msgstr "Solo el paladar duro es visible"
+
+#. module: medical_surgery
+#: model:ir.actions.act_window,name:medical_surgery.medical_operating_area_action
+#: model:ir.ui.menu,name:medical_surgery.medical_operating_area_menu
+#: model:ir.ui.menu,name:medical_surgery.medical_root_operating_area
+msgid "Operating Areas"
+msgstr "Área de Operación"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__operating_room
+msgid "Operating Room"
+msgstr "Sala de operaciones"
+
+#. module: medical_surgery
+#: model:ir.actions.act_window,name:medical_surgery.medical_operating_sector_action
+#: model:ir.ui.menu,name:medical_surgery.medical_operating_sector_menu
+msgid "Operating Sectors"
+msgstr "Sector de Operación"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_sector__operating_area_id
+msgid "Operational Area"
+msgstr "Área operativa"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_operating_area__operating_sector_ids
+msgid "Operational Sector"
+msgstr "Sector operativo"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__surgery_classification__optional
+msgid "Optional"
+msgstr "Opcional"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__asa_ps__ps1
+msgid "PS 1: Normal healty patient"
+msgstr "PS 1: Paciente sano normal"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__asa_ps__ps2
+msgid "PS 2: Patients with mild systemic disease"
+msgstr "PS 2: Pacientes con enfermedad sistémica leve"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__asa_ps__ps3
+msgid "PS 3: Patients with severe systemic disease"
+msgstr "EP 3: Pacientes con enfermedad sistémica grave"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__asa_ps__ps4
+msgid ""
+"PS 4: Patients with severe systemic disease that is a constant threat to "
+"life"
+msgstr ""
+"EP 4: Pacientes con enfermedad sistémica grave que es una amenaza "
+"constante para la vida."
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__asa_ps__ps5
+msgid ""
+"PS 5: Moribund patients who are not expectedd to survive without the "
+"operation"
+msgstr ""
+"PS 5: Pacientes moribundos que no se espera que sobrevivan sin la "
+"operación."
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__asa_ps__ps6
+msgid ""
+"PS 6: A declared brain-dead patient who organs are being removed for donor "
+"purposes"
+msgstr ""
+"PS 6: Paciente con muerte cerebral declarada a quien se le están "
+"extrayendo órganos para fines de donación"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__patient_id
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__patient_id
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: medical_surgery
+#: model:ir.model.fields,help:medical_surgery.field_medical_rcri__patient_id
+#: model:ir.model.fields,help:medical_surgery.field_medical_surgery__patient_id
+msgid "Patient Name"
+msgstr "Nombre del paciente"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__preoperative_diabetes
+msgid "Preoperative Diabetes"
+msgstr "Diabetes preoperatoria"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__preoperative_kidney_disease
+msgid "Preoperative Kidney Disease"
+msgstr "Enfermedad renal preoperatoria"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure__procedure_id
+msgid "Procedure"
+msgstr "Procedimiento"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_procedure__details
+msgid "Procedure Details"
+msgstr "Detalles del procedimiento"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__procedure_ids
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_surgery_form
+msgid "Procedures"
+msgstr "Procedimientos"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__pulse_oximeter
+msgid "Pulse Oximeter in Place"
+msgstr "Oxímetro de pulso colocado"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__rcri_id
+msgid "RCRI"
+msgstr ""
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__rcri_class
+msgid "RCRI Class"
+msgstr "Clase RCRI"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__rcri_date
+msgid "RCRI Date"
+msgstr "Fecha RCRI"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__surgery_classification__required
+msgid "Required"
+msgstr "Requerido"
+
+#. module: medical_surgery
+#: model:ir.model,name:medical_surgery.model_medical_rcri
+msgid "Revised Cardiac Risk Index (RCRI)"
+msgstr "Índice revisado de riesgo cardíaco (RCRI)"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__massive_bleeeding
+msgid "Risk of Massive Bleeding"
+msgstr "Riesgo de sangrado masivo"
+
+#. module: medical_surgery
+#. openerp-web
+#: code:addons/medical_surgery/static/src/js/webcam_widget.js:0
+#, python-format
+msgid "Save & Close"
+msgstr "Guardar y cerrar"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_rcri__score
+msgid "Score"
+msgstr "Puntaje"
+
+#. module: medical_surgery
+#: model:ir.model.fields,help:medical_surgery.field_medical_surgery__anesthetist
+msgid "Select anesthetist."
+msgstr "Seleccione anestesista."
+
+#. module: medical_surgery
+#: model:ir.model.fields,help:medical_surgery.field_medical_surgery__surgeon
+msgid "Select surgeon."
+msgstr "Seleccionar cirujano."
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__signed_by
+msgid "Signed By"
+msgstr "Firmado por"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__sterility_confirmed
+msgid "Sterility Confirmed"
+msgstr "Esterilidad confirmada"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__surgeon
+msgid "Surgeon"
+msgstr "Cirujano"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery_procedure__surgery_id
+#: model:ir.ui.menu,name:medical_surgery.medical_root_surgery
+msgid "Surgery"
+msgstr "Cirugía"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__surgery_classification
+msgid "Surgery Classification"
+msgstr "Clasificación de cirugía"
+
+#. module: medical_surgery
+#: model_terms:ir.ui.view,arch_db:medical_surgery.medical_surgery_form
+msgid "Surgical Safety Checklist"
+msgstr "Lista de verificación de seguridad quirúrgica"
+
+#. module: medical_surgery
+#: model:ir.model.fields,field_description:medical_surgery.field_medical_surgery__site_marking
+msgid "Surgical Site Marking"
+msgstr "Marcado del sitio quirúrgico"
+
+#. module: medical_surgery
+#. openerp-web
+#: code:addons/medical_surgery/static/src/js/webcam_widget.js:0
+#, python-format
+msgid "Take Snapshot"
+msgstr "Tomar instantáneas"
+
+#. module: medical_surgery
+#: model:ir.model.fields.selection,name:medical_surgery.selection__medical_surgery__surgery_classification__urgent
+msgid "Urgent"
+msgstr "Urgente"
+
+#. module: medical_surgery
+#. openerp-web
+#: code:addons/medical_surgery/static/src/xml/web_widget_image_webcam.xml:0
+#, python-format
+msgid "WebCam"
+msgstr ""
+
+#. module: medical_surgery
+#. openerp-web
+#: code:addons/medical_surgery/static/src/js/webcam_widget.js:0
+#, python-format
+msgid "WebCam Booth"
+msgstr "WebCam cabina"

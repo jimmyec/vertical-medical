@@ -125,14 +125,14 @@
         <field name="arch" type="xml">
             <form string="Medical Patient Disease">
                 <header>
-                    <field name="state" widget="statusbar" clickable="True" />
+                    <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>
                     <div class="oe_title" name="title">
                         <label for="name" class="edit_only" />
                         <h1><field name="name"/></h1>
                     </div>
-                    <div class="oe_button_box" name="buttons">
+                    <!-- <div class="oe_button_box" name="buttons">
                         <button name="toggle_active"
                                 type="object"
                                 class="oe_stat_button"
@@ -143,9 +143,10 @@
                                    options='{"terminology": "archive"}'
                                    />
                         </button>
-                    </div>
+                    </div> -->
                     <group name="data">
                         <group name="main">
+                            <field name="active" invisible='1' />
                             <field name="patient_id" />
                             <field name="short_comment" />
                             <field name="treatment_description" />

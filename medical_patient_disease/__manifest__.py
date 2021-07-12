@@ -19,7 +19,7 @@
     "data": [
         "security/ir.model.access.csv",
         "views/medical_patient_disease_view.xml",
-        "views/medical_patient_view.xml",
+        # "views/medical_patient_view.xml",
         "views/medical_menu.xml",
     ],
     "demo": [

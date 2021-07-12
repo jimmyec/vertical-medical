@@ -32,32 +32,32 @@
             <xpath expr="//form" position="attributes">
                 <attribute name="string">Medical Center</attribute>
             </xpath>
-            <xpath expr="//field[@name='type']" position="after">
+            <!-- <xpath expr="//field[@name='type']" position="after">
                 <field name="supplier" />
                 <field name="customer" />
-            </xpath>
+            </xpath> -->
             <xpath expr="//h1" position="after">
                 <h3>
                     <field name="is_company" invisible="True" />
-                    <field name="parent_id" placeholder="Parent Company"
+                    <!-- <field name="parent_id" placeholder="Parent Company"
                            domain="[('is_company', '=', True), ('type', '=', 'medical.center')]"
                            context="{'default_is_company': True,
                                      'default_type': 'medical.center',
                                      'default_supplier': supplier,
                                      'default_customer': customer,
-                                     }" />
+                                     }" /> -->
                 </h3>
             </xpath>
-            <xpath expr="//img[@name='kanban_image_default_company']" position="replace">
+            <!-- <xpath expr="//img[@name='kanban_image_default_company']" position="replace">
                 <img name="kanban_image_default_company"
                      t-if="record.is_company.raw_value === true"
                      t-attf-src='{{ _s }}/medical_center/static/src/img/medical-center-avatar.png'
                      />
-            </xpath>
+            </xpath> -->
         </field>
     </record>
 
-    <record id="medical_center_view_kanban" model="ir.ui.view">
+<!--     <record id="medical_center_view_kanban" model="ir.ui.view">
         <field name="name">medical.center.kanban</field>
         <field name="model">medical.center</field>
         <field name="inherit_id" ref="medical.medical_abstract_entity_view_kanban" />
@@ -81,7 +81,7 @@
                      />
             </xpath>
         </field>
-    </record>
+    </record> -->
 
     <record id="medical_center_view_search" model="ir.ui.view">
         <field name="name">medical.center.search</field>
@@ -119,15 +119,16 @@
     <record id="medical_center_action" model="ir.actions.act_window">
         <field name="name">Medical Centers</field>
         <field name="res_model">medical.center</field>
-        <field name="view_mode">tree,kanban,form</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="view_mode">tree,kanban,form</field> -->
         <field name="search_view_id" ref="medical_center_view_search" />
-        <field name="view_ids"
+      <!--   <field name="view_ids"
                eval="[(5, 0, 0),
-                      (0, 0, {'view_mode': 'kanban', 'view_id': ref('medical_center_view_kanban')}),
                       (0, 0, {'view_mode': 'tree', 'view_id': ref('medical_center_view_tree')}),
                       (0, 0, {'view_mode': 'form', 'view_id': ref('medical_center_view_form')}),
                      ]"
-        />
+        /> -->
+                      <!-- (0, 0, {'view_mode': 'kanban', 'view_id': ref('medical_center_view_kanban')}), -->
     </record>
 
 </odoo>

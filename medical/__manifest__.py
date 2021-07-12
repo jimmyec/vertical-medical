@@ -7,7 +7,8 @@
     'version': '13.0.0.0.0',
     'category': 'Medical',
     'depends': [
-        'product',
+        'education_core',
+        'base',
     ],
     'author': 'LasLabs, Odoo Community Association (OCA)',
     'website': 'https://odoo-community.org/',
@@ -16,15 +17,15 @@
         'security/medical_security.xml',
         'security/ir.model.access.csv',
         'data/ir_sequence_data.xml',
-        'templates/assets.xml',
+        # 'templates/assets.xml',
         'views/medical_abstract_entity.xml',
-        'views/medical_patient.xml',
-        'views/res_partner.xml',
+        # 'views/medical_patient.xml',
+        # 'views/res_partner.xml',
         'views/medical_menu.xml',
     ],
-    'demo': [
-        'demo/medical_patient_demo.xml',
-    ],
+    # 'demo': [
+    #     'demo/medical_patient_demo.xml',
+    # ],
     'installable': True,
     'application': True,
 }
